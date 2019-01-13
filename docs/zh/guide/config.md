@@ -3,6 +3,22 @@ sidebarDepth: 3
 ---
 # 配置手册
 
+PicGo的配置文件在不同系统里是不一样的。
+
+- Windows: `%APPDATA%\picgo\data.json`
+- Linux: `$XDG_CONFIG_HOME/picgo/data.json` or `~/.config/picgo/data.json`
+- macOS: `~/Library/Application\ Support/picgo/data.json`
+
+举例，在windows里你可以在：
+
+`C:\Users\你的用户名\AppData\Roaming\picgo\data.json`找到它。
+
+在linux里你可以在：
+
+`~/.config/picgo/data.json`里找到它。
+
+macOS同理。
+
 ## 基本操作预览
 
 ![2017-12-09 00 13 05-min](https://user-images.githubusercontent.com/12621342/34242857-d177930a-e658-11e7-9688-7405851dd5e5.gif)
