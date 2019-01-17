@@ -3,7 +3,7 @@ module.exports = {
   head: [
     [
       'link', {
-        rel: 'icon', href: 'https://user-images.githubusercontent.com/12621342/33876119-85a5148e-df5f-11e7-8843-46224e595d52.png'
+        rel: 'icon', href: 'https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/New%20LOGO-150.png'
       }
     ]
   ],

@@ -340,3 +340,7 @@ PicGo每次启动的时候会去检查最新版本。如果当前版本低于最
 ![](https://i.loli.net/2019/01/12/5c39aa4dab0b4.png)
 
 ![](https://i.loli.net/2019/01/12/5c39aea61e80d.gif)
+
+### 寻找插件
+
+你可以在PicGo官方的[Awesome-PicGo](https://github.com/PicGo/Awesome-PicGo)里找到超棒的PicGo插件和应用了PicGo的应用或者项目~
