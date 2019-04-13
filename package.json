@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "cz": "git-cz"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,28 @@
   },
   "homepage": "https://github.com/PicGo/PicGo-Doc#readme",
   "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@picgo/bump-version": "^1.0.2",
+    "commitizen": "^3.0.7",
+    "conventional-changelog": "^3.1.3",
+    "cz-customizable": "^5.10.0",
+    "husky": "^1.3.1",
     "vuepress": "^0.14.8"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "./node_modules/@picgo/bump-version/.cz-config.js"
+    }
+  },
+  "commitlint": {
+    "extends": ["./node_modules/@picgo/bump-version/commitlint-picgo"]
   }
 }
