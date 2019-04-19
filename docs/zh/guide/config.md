@@ -315,6 +315,13 @@ v5版本的存储桶名称格式是`bucket-appId`，类似于`xxxx-12312313`。�
 
 ## PicGo设置
 
+### 设置日志文件
+
+从`v2.1.0`开始PicGo支持记录你上传的日志，如果有什么报错等信息，可以及时反馈给开发者。你可以在这个设置里面打开日志文件查看，也可以设置输出的日志类型（比如成功、失败或者不输出等）。
+
+![logs](https://raw.githubusercontent.com/Molunerfinn/test/master/docs/logs)
+
+
 ### 自定义快捷键
 
 PicGo v1.4.0版本开始支持自定义快捷键（默认快捷键是`Cmd+Shift+P`【Mac】或者`Ctrl+Shift+P`【Windows】），点击侧边栏PicGo设置选中修改快捷键：
@@ -329,7 +336,11 @@ PicGo v1.4.0版本开始支持自定义快捷键（默认快捷键是`Cmd+Shift+
 
 PicGo预置的有四种链接格式：`Markdown`\\`HTML`\\`URL`\\`UBB`。如果你都不喜欢，想要自定义链接格式，可以选择`Custom`，然后在PicGo设置里点击`自定义链接格式`，然后你可以配置自己想要的复制的链接格式。
 
-![image](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/custom.png)
+::: tip
+v2.1.2开始支持`$fileName`设置文件名。
+:::
+
+![customUrl](https://raw.githubusercontent.com/Molunerfinn/test/master/docs/customUrl)
 
 ### 开关更新助手
 
