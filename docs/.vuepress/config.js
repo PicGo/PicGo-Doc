@@ -30,6 +30,10 @@ module.exports = {
           {
             text: '指南',
             link: '/zh/guide/'
+          },
+          {
+            text: '高级技巧',
+            link: '/zh/guide/advance'
           }
         ]
       },
@@ -41,6 +45,10 @@ module.exports = {
           {
             text: '指南',
             link: '/zh/guide/'
+          },
+          {
+            text: '高级技巧',
+            link: '/zh/guide/advance'
           }
         ]
       }
@@ -56,7 +64,8 @@ function getGuideSidebar (title) {
       children: [
         '',
         'getting-started',
-        'config'
+        'config',
+        'advance'
       ]
     }
   ]

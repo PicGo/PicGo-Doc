@@ -326,11 +326,13 @@ v5版本的存储桶名称格式是`bucket-appId`，类似于`xxxx-12312313`。�
 
 PicGo v1.4.0版本开始支持自定义快捷键（默认快捷键是`Cmd+Shift+P`【Mac】或者`Ctrl+Shift+P`【Windows】），点击侧边栏PicGo设置选中修改快捷键：
 
-![image](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/change-quick-key.png)
+会打开快捷键面板（v2.2.0+），可以选择禁用或者启用快捷键：
 
-在打开的dialog里，点击input框，然后按下你想要的快捷键（也可以是组合键）。然后点击**确定保存**（否则不生效！）
+![](https://cdn.jsdelivr.net/gh/Molunerfinn/test/picgo/20200101204942.png)
 
-![image](https://user-images.githubusercontent.com/12621342/35553216-ea22e18c-05d1-11e8-8913-047047b92c09.png)
+点击「编辑」，在打开的dialog里，点击input框，然后按下你想要的快捷键（也可以是组合键）。然后点击**确定保存**（否则不生效！）
+
+PicGo从2.2.0+版本添加了快捷键系统，插件也可以添加自己的快捷键，并且添加了快捷键会显示在快捷键面板里。可以方便启用或者禁用！
 
 ### 自定义链接格式
 
@@ -382,19 +384,27 @@ PicGo每次启动的时候会去检查最新版本。如果当前版本低于最
 用以主动发起更新检查。
 
 
-### 代理设置（v2.0）
+### 代理设置 <Badge text="2.0.0+" /> 
 
 2.0版本之后，支持简单设定HTTP代理。在`设置代理`一项处点击即可。 **未来不会支持复杂的代理设置，因为跟底层有关，只能支持简单HTTP代理。**
 
 ![](https://user-images.githubusercontent.com/12621342/50515474-ea83c600-0adf-11e9-8022-52f4ab9e0ea5.png)
 
-### 打开配置文件（v2.0）
+### 打开配置文件 <Badge text="2.0.0+" /> 
 
 2.0版本之后，你可以简单通过点击`打开配置文件`来打开配置文件，查看你上传的图片、你的图床设置等。
 
 ![](https://user-images.githubusercontent.com/12621342/50515474-ea83c600-0adf-11e9-8022-52f4ab9e0ea5.png)
 
-## 插件设置（v2.0）
+### PicGo-Server设置 <Badge text="2.2.0+" /> 
+
+2.2版本之后，PicGo内部会默认开启一个小型的服务器，用于配合其他应用来调用PicGo进行上传。监听的地址推荐就默认的 `127.0.0.1` （本机），端口推荐默认的 `36677`。当然如果你不想要开启也可以选择关闭，只不过推荐你可以开启~可以配合一些第三方工具实现很方便的上传工作流。
+
+关于Server的调用可以参考[高级技巧](/zh/guide/advance.html#PicGo-Server的使用)的说明。
+
+![](https://cdn.jsdelivr.net/gh/Molunerfinn/test/test/picgo-server.png)
+
+## 插件设置 <Badge text="2.0.0+" /> 
 
 2.0版本之后，你可以简单通过`插件设置`页面，安装、更新、禁用、卸载、配置、使用插件。
 
