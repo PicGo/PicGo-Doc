@@ -43,7 +43,7 @@ PicGo在`2.2.0`版本开始内置了一个小型的服务器，用于接收来�
 }
 ```
 
-![](https://user-images.githubusercontent.com/12621342/71626713-926b2c80-2c29-11ea-966a-9fae1b152712.png)
+![](https://cdn.jsdelivr.net/gh/Molunerfinn/test/PicGo/picgo-server-upload-clipboard-file.png)
 
 ### HTTP调用上传具体路径图片
 
