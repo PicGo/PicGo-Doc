@@ -45,28 +45,19 @@ macOS同理。
 
 ## 图床区
 
-### 微博图床
+### SMMS <Badge text="2.3.0+" /> 
 
 配置项及说明：
 
 ```json
 {
-  "chooseCookie": true | false, // 使用cookie模式？
-  "username": "", // 若不用cookie模式必须提供用户名和密码
-  "password": "", // 若不用cookie模式必须提供用户名和密码
-  "quality": "thumbnail" | "mw690" | "large", // 图片质量，默认large
-  "cookie": "" // 使用cookie模式必须提供cookie值
+  "token": "" // 通过SMMS后台获取的api token值
 }
 ```
 
-![image](https://user-images.githubusercontent.com/12621342/34974486-482c0caa-fac8-11e7-963b-8e0ee5418828.png)
+注册并登录[smms](https://sm.ms/home/apitoken)后台获取token值。
 
-上传的图片不会出现在你的微博相册里。可以选择链接的图片质量，这样在复制到剪贴板里的图片将会对应修改成对应的链接地址。设置你的微博图床可以选择两种模式：
-
-1. 只需填写你的微博用户名密码即可。**缺点**：上传速度会慢（尤其windows平台），因为要经过很多层验证。并且如果出现需要验证码的情况无法解决。
-2. 只需Cookie上传（PicGo v1.3.2及以上版本支持）。切换成cookie模式。然后先登录[微博](https://weibo.com)（必须先登录），之后打开[minipublish页面](https://weibo.com/minipublish)，如果你是mac用户，使用`command+alt+i`，如果你是windows用户，使用`F12`打开控制台，选择`Network`标签栏。然后刷新一下页面，找到Network里的`minipublish`一项，再找到`minipublish`右侧的`Cookie`一项，把`Cookie`冒号后的值全部复制（不要把`Cookie:`这个也复制了）然后填入`PicGo`里的Cookie一栏。这样就行了。
-
-![cookie](https://user-images.githubusercontent.com/12621342/34974243-fa5d2bf4-fac6-11e7-9869-a6a6e126cd15.png)
+![](https://cdn.jsdelivr.net/gh/Molunerfinn/test/picgo/20200307182127.png)
 
 ### 七牛图床
 
