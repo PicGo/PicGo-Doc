@@ -1,6 +1,6 @@
 # PicGo-Doc
 
-PicGo 的官方文档 -> https://github.com/PicGo/PicGo-Doc
+PicGo 的官方文档 -> https://picgo.github.io/PicGo-Doc/
 
 ## 贡献指南
 
