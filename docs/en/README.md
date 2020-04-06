@@ -1,8 +1,8 @@
 ---
 home: true
 heroImage: https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/New%20LOGO-150.png
-actionText: 快速开始 →
-actionLink: /zh/guide/
+actionText: Quick start →
+actionLink: /en/guide/
 features:
 - title: 灵活上传
   details: 主窗口支持拖拽、选择图片上传；支持读取剪贴板的第一张图片快捷上传。macOS支持顶部栏拖拽上传。

@@ -10,7 +10,7 @@ module.exports = {
   base: '/PicGo-Doc/',
   locales: {
     '/zh/': {
-      lang: 'zh-CN',
+      lang: '简体中文',
       title: 'PicGo',
       description: '图片上传、管理新体验'
     },
@@ -27,21 +27,6 @@ module.exports = {
     docsDir: 'docs',
     editLinks: true,
     locales: {
-      '/zh/': {
-        sidebar: {
-          '/zh/guide/': getGuideSidebar('指南'),
-        },
-        nav: [
-          {
-            text: '指南',
-            link: '/zh/guide/'
-          },
-          {
-            text: '高级技巧',
-            link: '/zh/guide/advance'
-          }
-        ]
-      },
       '/zh/': {
         sidebar: {
           '/zh/guide/': getGuideSidebar('指南'),
