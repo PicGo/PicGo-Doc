@@ -19,13 +19,15 @@ You can use mini window to upload your images in Windows and Linux. MacOS can do
 :::
 
 > Rectangular mini window in Linux
+
 ![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/linux-mini-window.png)
 
 > Round mini window in Windows
+
 ![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/windows-mini-window.png)
 
 1. You can directly drag and drop images to the mini window for uploading.
-2. Copy the image to the clipboard, then right click on the mini window and select `clipboard image upload` (** You are not allowed to copy the image itself in systems other than macOS, e.g. Windows must open the image and copy by right-clicking. In the normal case, you want to directly upload your image once you have a snipshot. That is the rationality of this design.**）
+2. Copy the image to the clipboard, then right click on the mini window and select `clipboard image upload` ( **You are not allowed to copy the image itself in systems other than macOS, e.g. Windows must open the image and copy by right-clicking. In the normal case, you want to directly upload your image once you have a snipshot. That is the rationality of this design.** ）
 
 ## Top Bar Upload
 
