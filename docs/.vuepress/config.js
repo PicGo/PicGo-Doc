@@ -51,7 +51,22 @@ module.exports = {
             link: '/zh/guide/advance'
           }
         ]
-      }
+      },
+      '/en/': {
+        sidebar: {
+          '/en/guide/': getGuideSidebar('Guidelines'),
+        },
+        nav: [
+          {
+            text: 'Guidelines',
+            link: '/en/guide/'
+          },
+          {
+            text: 'Advance Usage',
+            link: '/en/guide/advance'
+          }
+        ]
+      },
     }
   }
 }
