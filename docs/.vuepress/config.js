@@ -13,6 +13,11 @@ module.exports = {
       lang: 'zh-CN',
       title: 'PicGo',
       description: '图片上传、管理新体验'
+    },
+    '/en/': {
+      lang: 'English',
+      title: 'PicGo',
+      description: 'New Experience of Image Uploading and Management'
     }
   },
   description: '图片上传、管理新体验',
@@ -22,7 +27,7 @@ module.exports = {
     docsDir: 'docs',
     editLinks: true,
     locales: {
-      '/': {
+      '/zh/': {
         sidebar: {
           '/zh/guide/': getGuideSidebar('指南'),
         },
