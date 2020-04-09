@@ -37,7 +37,7 @@ macOS同理。
 
 ![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/picgo_edit_info.gif)
 
-### 选择复制的链接格式(v2.0)
+### 选择复制的链接格式（v2.0）
 
 之前的版本只能在上传区选择复制图片URL的链接格式，这样在相册区就不能很方便地选择复制的链接格式。2.0版本之后改进了这个用户体验，可以在相册区直接选择复制的连接格式了：
 
