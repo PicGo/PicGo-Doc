@@ -9,11 +9,16 @@ module.exports = {
   ],
   base: '/PicGo-Doc/',
   locales: {
-    '/zh/': {
+    '/': {
       lang: '简体中文',
       title: 'PicGo',
       description: '图片上传、管理新体验'
     },
+    // '/zh/': {
+    //   lang: '简体中文',
+    //   title: 'PicGo',
+    //   description: '图片上传、管理新体验'
+    // },
     '/en/': {
       lang: 'English',
       title: 'PicGo',
@@ -27,7 +32,7 @@ module.exports = {
     docsDir: 'docs',
     editLinks: true,
     locales: {
-      '/zh/': {
+      '/': {
         sidebar: {
           '/zh/guide/': getGuideSidebar('指南'),
         },
@@ -42,6 +47,21 @@ module.exports = {
           }
         ]
       },
+      // '/zh/': {
+      //   sidebar: {
+      //     '/zh/guide/': getGuideSidebar('指南'),
+      //   },
+      //   nav: [
+      //     {
+      //       text: '指南',
+      //       link: '/zh/guide/'
+      //     },
+      //     {
+      //       text: '高级技巧',
+      //       link: '/zh/guide/advance'
+      //     }
+      //   ]
+      // },
       '/en/': {
         sidebar: {
           '/en/guide/': getGuideSidebar('Guidelines'),
