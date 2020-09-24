@@ -1,11 +1,7 @@
-# PicGo 
-
-> New Experience of Image Upload and Management
-
-<p align="center">
+<div align="center">
   <img src="https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/New%20LOGO-150.png" alt="">
-</p>
-<p align="center">
+  <h1>PicGo</h1>
+  <blockquote>New Experience of Image Upload and Management</blockquote>
   <a href="https://github.com/feross/standard">
     <img src="https://img.shields.io/badge/code%20style-standard-green.svg?style=flat-square" alt="">
   </a>
@@ -18,7 +14,13 @@
   <a href="https://github.com/Molunerfinn/PicGo/releases/latest">
     <img src="https://img.shields.io/github/release/Molunerfinn/PicGo.svg?style=flat-square" alt="">
   </a>
-</p>
+  <a href="https://github.com/PicGo/bump-version">
+    <img src="https://img.shields.io/badge/picgo-convention-blue.svg?style=flat-square" alt="">
+  </a>
+  <a href="https://gitter.im/picgo-all/PicGo?utm_source=share-link&utm_medium=link&utm_campaign=share-link">
+    <img src="https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-66ae93.svg?style=flat-square" alt="">
+  </a>
+</div>
 
 ## Instruction
 
@@ -26,12 +28,11 @@
 
 Currently, PicGo supports the following Img:
 
-- `Weibo Img` v1.0
 - `Qiniu Img` v1.0
 - `Tencent Cloud COS v4\v5` v1.1 & v1.5.0
 - `Upyun` v1.2.0
 - `GitHub` v1.5.0
-- `SM.MS` v1.5.1
+- `SM.MS V2` v2.3.0-beta.0
 - `Alibaba OSS` v1.6.0
 - `Imgur` v1.6.0
 
