@@ -202,7 +202,7 @@ v5版本的存储桶名称格式是`bucket-appId`，类似于`xxxx-12312313`。�
   "token": "", // github token
   "path": "", // 自定义存储路径，比如img/
   "customUrl": "", // 自定义域名，注意要加http://或者https://
-  "branch": "" // 分支名，默认是master
+  "branch": "" // 分支名，默认是main
 }
 ```
 
@@ -232,7 +232,7 @@ v5版本的存储桶名称格式是`bucket-appId`，类似于`xxxx-12312313`。�
 
 **4.** 配置PicGo
 
-**注意：**仓库名的格式是`用户名/仓库`，比如我创建了一个叫做`test`的仓库，在PicGo里我要设定的仓库名就是`Molunerfinn/test`。一般我们选择`master`分支即可。然后记得点击确定以生效，然后可以点击`设为默认图床`来确保上传的图床是GitHub。
+**注意：**仓库名的格式是`用户名/仓库`，比如我创建了一个叫做`test`的仓库，在PicGo里我要设定的仓库名就是`Molunerfinn/test`。一般我们选择`main`分支即可。然后记得点击确定以生效，然后可以点击`设为默认图床`来确保上传的图床是GitHub。
 
 ![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/setup_github.png)
 

@@ -193,7 +193,7 @@ The configuration items:
   "token": "",                                // github token
   "path": ""                                  // storage path
   "customUrl": "", 														// customized domain
-  "branch": ""                                // branch, master by default
+  "branch": ""                                // branch, main by default
 }
 ```
 
@@ -219,7 +219,7 @@ Access: https://github.com/setting/tokens
 
 **4.** Configure your GitHub repository for PicGo.
 
-**Note: ** Use your GitHub repository `username/reponame`, and selete the branch (master by default). Afterward, you should set it as default Img by `set as default`.
+**Note: ** Use your GitHub repository `username/reponame`, and selete the branch (main by default). Afterward, you should set it as default Img by `set as default`.
 
 ![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/setup_github.png)
 
