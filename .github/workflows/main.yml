@@ -46,9 +46,8 @@ jobs:
         run: |
           npm run build
           cd docs/.vuepress/dist
-          git init
-          git config user.name "Molunerfinn"
-          git config user.email "marksz@teamsz.xyz"
-          git add .
-          git commit -m "Update docs"
-          git push --force --quiet "https://${{ secrets.GH_TOKEN }}@github.com/PicGo/PicGo-Doc.git" master:gh-pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          publish_dir: docs/.vuepress/dist
