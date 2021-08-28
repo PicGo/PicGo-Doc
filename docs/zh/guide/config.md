@@ -23,25 +23,48 @@ macOS同理。
 
 ![2017-12-09 00 13 05-min](https://user-images.githubusercontent.com/12621342/34242857-d177930a-e658-11e7-9688-7405851dd5e5.gif)
 
+PS: 如何打开本窗口，请参考[「快速入门」](./getting-started.md#主窗口上传) 一章。
+
 ## 上传区
 
-上传区支持拖拽上传或者点击区域打开文件夹上传
+上传区支持拖拽上传或者点击区域打开文件夹上传。还包括支持剪贴板图片上传、通过URL上传等功能。
+
+![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/picgo-2.0.gif)
+
+### 拖拽网页图片上传  <Badge text="2.3.0+" />
+
+2.3.0版本开始，你可以通过直接拖拽网页图片至上传区域进行上传。它的原理其实就是用后面的「通过URL上传」这个功能实现的。
+
+### 通过URL上传 <Badge text="2.3.0+" />
+
+2.3.0版本开始，你可以通过图片URL来上传图片。可以用于将其他地址的图片上传至你自己的图床中。
+
+![](https://cdn.jsdelivr.net/gh/Molunerfinn/test/sspai/202108282058950.png)
 
 ## 相册区
 
 支持查看你上传成功的所有图片。点击图片可以预览。点击图片下面的图标可以复制链接或者删除图片（只是删除本地数据，使其不在相册区里出现）
 
-### 编辑相册的图片信息（v1.5)
+### 编辑相册的图片信息 <Badge text="1.5.0+" />
 
 有些时候可能上传的图片的url事后需要更改，比如修改http到https，比如加上一些操作后缀（例：七牛图床支持的`?imgslim`）等等。PicGo本次的更新也让你能够更方便地管理你的图片库。
 
 ![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/picgo_edit_info.gif)
 
-### 选择复制的链接格式（v2.0）
+### 选择复制的链接格式 <Badge text="2.0.0+" />
 
 之前的版本只能在上传区选择复制图片URL的链接格式，这样在相册区就不能很方便地选择复制的链接格式。2.0版本之后改进了这个用户体验，可以在相册区直接选择复制的连接格式了：
 
 ![](https://user-images.githubusercontent.com/12621342/50515502-17d07400-0ae0-11e9-80b9-c38f25b64922.png)
+
+
+### 全选以及shift多选支持 <Badge text="2.3.0+" />
+
+2.3.0版本开始，相册操作区支持「全选」操作
+
+![](https://cdn.jsdelivr.net/gh/Molunerfinn/test/sspai/202108282136783.png)
+
+同时，也支持简单的 `shift` 键跨图片多选。
 
 ## 图床区
 
@@ -368,18 +391,37 @@ PicGo每次启动的时候会去检查最新版本。如果当前版本低于最
 ### 自动时间戳命名
 ![](https://camo.githubusercontent.com/25e5d680bfd19a086611871ac4621c5b079a9c99/68747470733a2f2f692e6c6f6c692e6e65742f323031382f30362f30352f356231363833623334366236372e706e67)
 开启之后会自动将上传的文件名替换成时间戳：
-![](https://user-images.githubusercontent.com/12621342/40976264-2de18afe-6900-11e8-8f35-746820632eb8.png）
+![](https://user-images.githubusercontent.com/12621342/40976264-2de18afe-6900-11e8-8f35-746820632eb8.png)
+
+### 上传后自动复制URL <Badge text="2.3.0+" />
+
+默认开启（上传后会自动复制URL到剪贴板），当然你也可以选择关闭。
+
+![](https://cdn.jsdelivr.net/gh/Molunerfinn/test/sspai/202108282054234.png)
 
 ### 检查更新
 ![](https://user-images.githubusercontent.com/12621342/40976407-ad43d07c-6900-11e8-854f-15e1c41a7d8d.png)
 用以主动发起更新检查。
 
 
-### 代理设置 <Badge text="2.0.0+" /> 
+### 接受Beta版本更新 <Badge text="2.3.0+" />
+
+PicGo从2.3.0版本开始会有beta版本的更新。如果想及时收到beta版本更新可以打开这个配置。
+
+### 代理设置 <Badge text="2.3.0+" />
 
 2.0版本之后，支持简单设定HTTP代理。在`设置代理`一项处点击即可。 **未来不会支持复杂的代理设置，因为跟底层有关，只能支持简单HTTP代理。**
 
-![](https://user-images.githubusercontent.com/12621342/50515474-ea83c600-0adf-11e9-8022-52f4ab9e0ea5.png)
+![](https://cdn.jsdelivr.net/gh/Molunerfinn/test/sspai/202108282025099.png)
+
+- 针对上传时候的代理请配置「上传代理」
+- 如果针对插件安装的代理请配置「插件安装代理」
+- 如果是针对插件安装时候的npm镜像源的设置，可以设置「插件镜像地址」，推荐使用淘宝源:
+
+```
+https://registry.npm.taobao.org/
+```
+
 
 ### 打开配置文件 <Badge text="2.0.0+" /> 
 
@@ -401,7 +443,7 @@ PicGo每次启动的时候会去检查最新版本。如果当前版本低于最
 
 ![](https://user-images.githubusercontent.com/12621342/50515434-bc9e8180-0adf-11e9-8c71-0e39973c06b1.png)
 
-### 安装
+### 在线安装
 
 ::: warning 注意
 你必须安装[Node.js](https://nodejs.org/en/)之后才能安装PicGo的插件，因为PicGo要使用`npm`来安装插件。
@@ -410,6 +452,12 @@ PicGo每次启动的时候会去检查最新版本。如果当前版本低于最
 在插件界面的搜索栏搜索插件名。PicGo的插件名以`picgo-plugin-`为前缀，你只需要搜前缀后的名字即可。比如一个`picgo-plugin-wow`的插件你只需要搜索`wow`即可。
 
 搜到了插件之后只要点击右下角的`安装`即可。如果遇到`未对GUI优化`的提示，可以询问一下插件作者，这个插件适不适合在PicGo软件上使用，否则它有可能只是个命令行插件。
+
+### 离线安装 <Badge text="2.3.0+" />
+
+支持导入本地插件（文件夹）。导入要求是一个完整的 picgo 插件文件夹。可用于离线安装picgo插件包或者插件开发者自测使用。导入插件的入口在 `插件设置` 页的标题栏右侧：
+
+![](https://cdn.jsdelivr.net/gh/Molunerfinn/test/sspai/202108282004729.png)
 
 ### 更新、卸载与禁用
 
@@ -442,3 +490,7 @@ PicGo每次启动的时候会去检查最新版本。如果当前版本低于最
 ### 寻找插件
 
 你可以在PicGo官方的[Awesome-PicGo](https://github.com/PicGo/Awesome-PicGo)里找到超棒的PicGo插件和应用了PicGo的应用或者项目~
+
+### 插件开发
+
+如果你想为 PicGo 开发插件，可以查看 PicGo [插件开发相关文档](https://picgo.github.io/PicGo-Core-Doc/zh/dev-guide/cli.html)。非常感谢你为 PicGo 所做的贡献！

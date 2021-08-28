@@ -1,0 +1,54 @@
+# main.yml
+
+# Workflow's name
+name: Build
+
+# Workflow's trigger
+on:
+  push:
+    branches:
+      - master
+
+# Workflow's jobs
+jobs:
+  # job's id
+  release:
+    # job's name
+    name: build and release electron app
+
+    # the type of machine to run the job on
+    runs-on: ${{ matrix.os }}
+
+    # create a build matrix for jobs
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+
+    # create steps
+    steps:
+      # step1: check out repository
+      - name: Check out git repository
+        uses: actions/checkout@v2
+
+      # step2: install node env
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+
+      # step3: yarn
+      - name: Yarn install
+        run: |
+          yarn
+
+      - name: Build  & release app
+        run: |
+          npm run build
+          cd docs/.vuepress/dist
+          git init
+          git config user.name "Molunerfinn"
+          git config user.email "marksz@teamsz.xyz"
+          git add .
+          git commit -m "Update docs"
+          git push --force --quiet "https://${{ secrets.GH_TOKEN }}@github.com/PicGo/PicGo-Doc.git" master:gh-pages

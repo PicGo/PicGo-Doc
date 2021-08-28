@@ -1,14 +1,14 @@
-## 听说你也想用PicGo
+# PicGo
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/New%20LOGO-150.png" alt="">
   <h1>PicGo</h1>
   <blockquote>图片上传+管理新体验 </blockquote>
-  <a href="https://github.com/feross/standard">
+  <a href="https://github.com/Molunerfinn/PicGo/actions">
     <img src="https://img.shields.io/badge/code%20style-standard-green.svg?style=flat-square" alt="">
   </a>
-  <a href="https://travis-ci.org/Molunerfinn/PicGo/builds">
-    <img src="https://img.shields.io/travis/Molunerfinn/PicGo.svg?style=flat-square" alt="">
+  <a href="https://github.com/Molunerfinn/PicGo/actions">
+    <img src="https://github.com/Molunerfinn/PicGo/workflows/Build/badge.svg" alt="">
   </a>
   <a href="https://github.com/Molunerfinn/PicGo/releases">
     <img src="https://img.shields.io/github/downloads/Molunerfinn/PicGo/total.svg?style=flat-square" alt="">
@@ -53,7 +53,7 @@ PicGo 本体支持如下图床：
 - 支持通过发送 HTTP 请求调用 PicGo 上传（v2.2.0+)
 - 更多功能等你自己去发现，同时也会不断开发新功能
   - 开发进度可以查看 [Projects](https://github.com/Molunerfinn/PicGo/projects)，会同步更新开发进度
-  - 欢迎加入 [官方 Gitter 频道](https://gitter.im/picgo-all/PicGo?utm_source=share-link&utm_medium=link&utm_campaign=share-link) 与我交流
+  - 欢迎加入 [官方讨论区](https://github.com/Molunerfinn/PicGo/discussions) 与我交流
 
 **如果第一次使用，请参考应用 [使用文档](https://picgo.github.io/PicGo-Doc/zh/guide/getting-started.html)。遇到问题了还可以看看 [FAQ](https://github.com/Molunerfinn/PicGo/blob/dev/FAQ.md) 以及被关闭的 [issues](https://github.com/Molunerfinn/PicGo/issues?q=is%3Aissue+is%3Aclosed)。**
 
@@ -73,13 +73,13 @@ Windows 用户请下载最新版本的 `exe` 文件。
 
 macOS 用户请下载最新版本的 `dmg` 文件。
 
-**还可以使用 `brew cask` 来安装 PicGo: `brew cask install picgo`。感谢 @womeimingzi11 的贡献！**
+**还可以使用 [Homebrew](https://brew.sh/) 来安装 PicGo: `brew install picgo --cask`。感谢 @womeimingzi11 的贡献！**
 
 ### Linux
 
 Linux 用户请下载 `AppImage` 文件。
 
-**如果你是 Arch 类的 Linux 用户，可以直接通过 `aurman -S picgo-appimage` 来安装 PicGo。感谢 @houbaron 的贡献！**
+**如果你是 Arch 类的 Linux 用户，可以直接通过 `yay -S picgo-appimage` 来安装 PicGo （若是没有则先安装 yay ，是 aur 仓库助手）。感谢 @houbaron 的贡献！**
 
 ## 应用截图
 
@@ -146,4 +146,4 @@ npm run electron:build
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2017 - 2019 Molunerfinn
+Copyright (c) from 2017 Molunerfinn

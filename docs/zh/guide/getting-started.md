@@ -25,7 +25,12 @@ Mini窗口只支持Windows和Linux，macOS可以使用顶部栏图标。（因�
 ![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/windows-mini-window.png)
 
 1. 可以直接拖拽图片到mini窗口上上传
-2. 将图片复制到剪贴板，然后右键mini窗口，选择`剪贴板图片上传`（**注意非macOS平台不能是复制图片文件，而应该复制图片本身。比如Windows必须打开图片后，右键图片->复制图片才可以。不过通常情况下，你直接截图后，图片就复制到剪贴板了。所以截图之后可以直接使用这个功能。**）
+2. 将图片复制到剪贴板，然后右键mini窗口，选择`剪贴板图片上传`
+
+::: tip 提示
+**只有macOS以及Windows10可以通过复制图片文件本身然后通过剪贴板图片上传上传。Windows7或者Linux必须打开图片后，右键图片->复制图片才可以通过剪贴板图片上传。不过通常情况下，你直接截图后，图片就复制到剪贴板了。所以截图之后可以直接使用这个功能。**
+:::
+
 
 ## 顶部栏上传
 
@@ -41,7 +46,15 @@ Mini窗口只支持Windows和Linux，macOS可以使用顶部栏图标。（因�
 
 ## 主窗口上传
 
-在Mini窗口或者macOS的顶部栏图标处右键 -> 打开`详细窗口`，即可打开主窗口。
+不同平台打开主窗口的方式不同：
+
+- Windows请在右下角任务栏中找到PicGo图标，如果找不到请点击小箭头。左键即可打开。
+
+![](https://cdn.jsdelivr.net/gh/Molunerfinn/test/sspai/202108282035035.png)
+
+- macOS请在顶部栏区域找到PicGo图标，右键（触摸板双指点按或者鼠标右键）即可找到打开主窗口的菜单。
+
+- Linux请在在Mini窗口或者任务栏图标右键 -> 打开`详细窗口`，即可打开主窗口。
 
 ![](https://i.loli.net/2019/01/13/5c3ae442c124b.png)
 
