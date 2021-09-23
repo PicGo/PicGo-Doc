@@ -12,6 +12,8 @@
 - macOS 和 Linux 用户请使用脚本安装：`curl -o- -L https://yarnpkg.com/install.sh | bash`
 - 以上二者都安装结束之后，在项目根目录里请用控制台输入 `yarn`，用于安装依赖。禁用 `npm` 安装依赖，因为本仓库用 `yarn.lock` 来对依赖进行了锁版本的操作。
 
+Tips: 国内使用 yarn 安装依赖可能会出现网络错误，可尝试使用淘宝镜像或升级 yarn 的版本，参考[yarn官方文档](https://yarnpkg.com/getting-started/install)
+
 ## 分支与提交相关
 
 当你要对本仓库做贡献，你一定会 fork 它！此后的分支和提交相关的步骤可以按如下指南进行：
