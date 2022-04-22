@@ -80,7 +80,7 @@ You can find your user key in [your Qiniu portal](https://portal.qiniu.com/user/
 
 ![image](https://user-images.githubusercontent.com/12621342/34243146-69af085a-e65a-11e7-965c-2a3d15856480.png)
 
-You need to fill the `area` in the configuration file according to this:
+You need to fill the `area` in the configuration file according to [this](https://developer.qiniu.com/kodo/1671/region-endpoint-fq):
 
 ![image](https://user-images.githubusercontent.com/12621342/50533009-e5189100-0b5c-11e9-9812-438576990828.png)
 
