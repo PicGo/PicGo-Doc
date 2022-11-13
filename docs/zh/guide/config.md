@@ -74,7 +74,8 @@ PS: 如何打开本窗口，请参考[「快速入门」](./getting-started.md#�
 
 ```json
 {
-  "token": "" // 通过SMMS后台获取的api token值
+  "token": "", // 通过SMMS后台获取的api token值
+  "backupDomain": "" // v2.3.1 支持备用上传域名，可选。推荐 smms.app
 }
 ```
 
@@ -335,6 +336,12 @@ v5版本的存储桶名称格式是`bucket-appId`，类似于`xxxx-12312313`。�
 
 ![logs](https://raw.githubusercontent.com/Molunerfinn/test/master/docs/logs)
 
+#### 日志文件大小 <Badge text="2.3.1+" />
+
+从 `v2.3.1` 开始，PicGo的日志文件默认大小为`10MB`，如果你想修改日志文件的大小，可以在`PicGo`的设置中修改日志文件大小。
+
+![](https://pic.molunerfinn.com/picgo/docs/202211131633687.png)
+
 
 ### 自定义快捷键
 
@@ -353,7 +360,9 @@ PicGo从2.2.0+版本添加了快捷键系统，插件也可以添加自己的快
 PicGo预置的有四种链接格式：`Markdown`\\`HTML`\\`URL`\\`UBB`。如果你都不喜欢，想要自定义链接格式，可以选择`Custom`，然后在PicGo设置里点击`自定义链接格式`，然后你可以配置自己想要的复制的链接格式。
 
 ::: tip
-v2.1.2开始支持`$fileName`设置文件名。
+v2.1.2 开始支持`$fileName`设置文件名。
+
+v2.3.1 开始支持 `$extName` 设置文件后缀。
 :::
 
 ![customUrl](https://raw.githubusercontent.com/Molunerfinn/test/master/docs/customUrl)
@@ -368,7 +377,7 @@ PicGo每次启动的时候会去检查最新版本。如果当前版本低于最
 
 ![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/autoStart.png)
 
-### 上传前重命名
+### 上传前手动重命名
 
 如果你想在图片上传前能够有机会改动你的图片名，那么可以选择开启图片上传前重命名：
 
@@ -377,6 +386,12 @@ PicGo每次启动的时候会去检查最新版本。如果当前版本低于最
 之后你在上传的时候就会弹出一个小窗口让你重命名文件。如果你不想重命名，点击确定、取消或者直接关闭这个窗口都是可以的。如果你想要重命名就在输入框里输入想要更改的名字，然后点击确定即可。另外这个特性也支持批量上传，如下：
 
 ![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/picgo_rename.gif)
+
+### 自动时间戳命名
+
+![](https://camo.githubusercontent.com/25e5d680bfd19a086611871ac4621c5b079a9c99/68747470733a2f2f692e6c6f6c692e6e65742f323031382f30362f30352f356231363833623334366236372e706e67)
+开启之后会自动将上传的文件名替换成时间戳：
+![](https://user-images.githubusercontent.com/12621342/40976264-2de18afe-6900-11e8-8f35-746820632eb8.png)
 
 ### 选择想要显示的图床
 
@@ -387,11 +402,6 @@ PicGo每次启动的时候会去检查最新版本。如果当前版本低于最
 ### 上传提示
 ![](https://camo.githubusercontent.com/763757f281c0a19ee526f26bbb1a2814f164879b/68747470733a2f2f692e6c6f6c692e6e65742f323031382f30362f30352f356231363832666134316337302e706e67)
 打开之后会在每次上传图片的时候弹出提示框提示正在上传。 **如果你发现打开之后，没有效果，请注意看看是不是你关闭了系统级别的消息通知选项，因为PicGo调用的是系统级别的消息通知栏。**
-
-### 自动时间戳命名
-![](https://camo.githubusercontent.com/25e5d680bfd19a086611871ac4621c5b079a9c99/68747470733a2f2f692e6c6f6c692e6e65742f323031382f30362f30352f356231363833623334366236372e706e67)
-开启之后会自动将上传的文件名替换成时间戳：
-![](https://user-images.githubusercontent.com/12621342/40976264-2de18afe-6900-11e8-8f35-746820632eb8.png)
 
 ### 上传后自动复制URL <Badge text="2.3.0+" />
 
@@ -421,6 +431,24 @@ PicGo从2.3.0版本开始会有beta版本的更新。如果想及时收到beta�
 ```
 https://registry.npm.taobao.org/
 ```
+
+### 使用内置剪贴板上传 <Badge text="2.3.1+" />
+
+「使用内置剪贴板上传」功能，可以用于取代之前使用脚本获取剪贴板的方式。如果遇到剪贴板上传的问题，比如进程残留等，可以考虑开启这个选项。
+
+![](https://pic.molunerfinn.com/picgo/docs/202211131629346.png)
+
+### i18n 国际化设置 <Badge text="2.3.1+" />
+
+2.3.1版本开始，PicGo 界面支持多语言。默认支持的语言如下：
+
+- 简体中文 （默认）
+- 繁體中文
+- English
+
+![](https://pic.molunerfinn.com/picgo/docs/202211131620277.png)
+
+如果你想为 PicGo 新增语言支持，可以参考 [PicGo 的国际化文档](https://github.com/Molunerfinn/PicGo/blob/dev/CONTRIBUTING.md#i18n)，以及这个 [PR](https://github.com/Molunerfinn/PicGo/pull/976)。
 
 
 ### 打开配置文件 <Badge text="2.0.0+" /> 

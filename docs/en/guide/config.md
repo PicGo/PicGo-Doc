@@ -50,7 +50,8 @@ The configuration item:
 
 ```json
 {
-  "token": ""                                 // your api token
+  "token": "",                                 // your api token
+  "backupDomain": ""                           // v2.3.1 Support alternate upload domain, optional. Recommended smms.app
 }
 ```
 
@@ -297,6 +298,12 @@ Since v2.1.0, PicGo support to record your upload logs. If there is any error an
 
 ![logs](https://raw.githubusercontent.com/Molunerfinn/test/master/docs/logs)
 
+#### Log file size <Badge text="2.3.1+" />
+
+Since `v2.3.1`, the default size of PicGo's log file is `10MB`. If you want to change the size of the log file, you can change the log file size in `PicGo`'s settings.
+
+![](https://pic.molunerfinn.com/picgo/docs/202211131633687.png)
+
 
 ### Customized Shortcuts
 
@@ -314,6 +321,8 @@ PicGo preset four image link formats, i.e., `Markdown`\\`HTML`\\`URL`\\`UBB`. Yo
 
 ::: tip
 PicGo supports `$fileName`since v2.1.2.
+
+PicGo supports `$extName`since v2.3.1.
 :::
 
 ![customUrl](https://raw.githubusercontent.com/Molunerfinn/test/master/docs/customUrl)
@@ -328,7 +337,7 @@ You can choose to auto-start PicGo when booting up.
 
 ![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/autoStart.png)
 
-### Rename before Uploading
+### Mannually Rename before Uploading
 
 PicGo allow you to rename your images before uploading:
 
@@ -337,6 +346,14 @@ PicGo allow you to rename your images before uploading:
 Then you will see a window to rename your image. If you do not want to many any changes, just confirm, cancel or just close it. Besides, this feature also supports uploads in branch:
 
 ![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/picgo_rename.gif)
+
+### Auto Rename with Timestamp
+
+![](https://camo.githubusercontent.com/25e5d680bfd19a086611871ac4621c5b079a9c99/68747470733a2f2f692e6c6f6c692e6e65742f323031382f30362f30352f356231363833623334366236372e706e67)
+
+When enabled, the uploaded file name will be automatically replaced with the timestamp:
+
+![](https://user-images.githubusercontent.com/12621342/40976264-2de18afe-6900-11e8-8f35-746820632eb8.png)
 
 ### Select Img to Display
 
@@ -350,13 +367,6 @@ You may not use all of the Imgs that PicGo gives to you. So in order to simplify
 
 Every time PicGo uploads an image, the upload status will be shown to indicate that the image is being uploaded. **If you find that it doesn't work after you open it, notice if you've turned off the system-level message notification option, because PicGo calls the system-level message notification bar.**
 
-### Timestamp Name 
-
-![](https://camo.githubusercontent.com/25e5d680bfd19a086611871ac4621c5b079a9c99/68747470733a2f2f692e6c6f6c692e6e65742f323031382f30362f30352f356231363833623334366236372e706e67)
-
-When enabled, the uploaded file name will be automatically replaced with the timestamp:
-
-![](https://user-images.githubusercontent.com/12621342/40976264-2de18afe-6900-11e8-8f35-746820632eb8.png)
 
 ### Upgrade Check
 
@@ -367,6 +377,26 @@ When enabled, the uploaded file name will be automatically replaced with the tim
 Since v2.0, PicGo supports HTTP proxy. You can set it at `proxy setting`. **We do not plan to add sophisticated proxy, because this is related to the underlying parts.**
 
 ![](https://user-images.githubusercontent.com/12621342/50515474-ea83c600-0adf-11e9-8022-52f4ab9e0ea5.png)
+
+### Use Builtin Clipboard to Upload <Badge text="2.3.1+" />
+
+The "Use Builtin Clipboard to Upload" feature can be used to replace the previous way of using scripts to get the clipboard pictures. Consider turning on this option if you encounter problems with clipboard uploads, such as process residuals, etc.
+
+![](https://pic.molunerfinn.com/picgo/docs/202211131629346.png)
+
+
+### i18n Settings <Badge text="2.3.1+" />
+
+Since v2.3.1, PicGo supports multiple languages. The default supported languages are as follows:
+
+- zh-CN (default)
+- zh-TW
+- English
+
+![](https://pic.molunerfinn.com/picgo/docs/202211131620277.png)
+
+If you want to add language support for PicGo, you can refer to the [i18n documentation for PicGo](https://github.com/Molunerfinn/PicGo/blob/dev/CONTRIBUTING_EN.md#i18n) & this [PR](https://github.com/Molunerfinn/PicGo/pull/976).
+
 
 ### Open Configuration Files <Badge text="2.0.0+" /> 
 

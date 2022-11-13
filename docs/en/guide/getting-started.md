@@ -5,7 +5,7 @@ sidebarDepth: 3
 ## Quickstart
 
 ::: warning
-Make sure you have Node.js >= 8.
+Make sure you have Node.js >= 16.
 :::
 
 ::: tip
@@ -43,7 +43,17 @@ Top bar upload is only supported in MacOS.
 
 ## Main Window Upload
 
-You can open the main window, by right clicking the mini window or the top bar icon to open the `main window`.
+Different platforms open the main window in different ways.
+
+- Windows please find the PicGo icon in the taskbar at the bottom right corner, if you can't find it please click the small arrow. Left click to open it.
+
+![](https://cdn.jsdelivr.net/gh/Molunerfinn/test/sspai/202108282035035.png)
+
+- For macOS, please find the PicGo icon in the top bar area and right click (touchpad double finger click or right mouse button) to find the menu to open the main window. Or in version `2.3.1+` you can open it from the top bar window with the button.
+
+![](https://pic.molunerfinn.com/picgo/docs/202211131604805.png)
+
+- For Linux, right-click on the Mini window or Taskbar icon -> Open `Detail Window` to open the main window.
 
 ![](https://i.loli.net/2019/01/13/5c3ae442c124b.png)
 

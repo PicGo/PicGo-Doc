@@ -1,14 +1,14 @@
 ## PicGo is Here
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/New%20LOGO-150.png" alt="">
+  <img src="https://pic.molunerfinn.com/picgo/docs/logo-150.png" alt="">
   <h1>PicGo</h1>
-  <blockquote>New Experience of Image Upload and Management</blockquote>
-  <a href="https://github.com/feross/standard">
+  <blockquote>New experience of pictures upload + management</blockquote>
+  <a href="https://github.com/Molunerfinn/PicGo/actions">
     <img src="https://img.shields.io/badge/code%20style-standard-green.svg?style=flat-square" alt="">
   </a>
-  <a href="https://travis-ci.org/Molunerfinn/PicGo/builds">
-    <img src="https://img.shields.io/travis/Molunerfinn/PicGo.svg?style=flat-square" alt="">
+  <a href="https://github.com/Molunerfinn/PicGo/actions">
+    <img src="https://github.com/Molunerfinn/PicGo/actions/workflows/main.yml/badge.svg" alt="">
   </a>
   <a href="https://github.com/Molunerfinn/PicGo/releases">
     <img src="https://img.shields.io/github/downloads/Molunerfinn/PicGo/total.svg?style=flat-square" alt="">
@@ -18,9 +18,6 @@
   </a>
   <a href="https://github.com/PicGo/bump-version">
     <img src="https://img.shields.io/badge/picgo-convention-blue.svg?style=flat-square" alt="">
-  </a>
-  <a href="https://gitter.im/picgo-all/PicGo?utm_source=share-link&utm_medium=link&utm_campaign=share-link">
-    <img src="https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-66ae93.svg?style=flat-square" alt="">
   </a>
 </div>
 
@@ -52,9 +49,14 @@ View [Projects](https://github.com/Molunerfinn/PicGo/projects) to see the progre
 
 You can download the latest `dmg` (MacOS), `exe` (Windows) or `AppImage` (Linux).
 
-Click [here](https://github.com/Molunerfinn/PicGo/releases) to down PicGo.
 
-**If you are using Arch Linux, please install using `aurman -S picgo-appimage` (contributed by @houbaron).**
+| Source  | URL/Installation | Platform | Remark |
+|---|---|---|---|
+| GitHub Release  | [https://github.com/Molunerfinn/PicGo/releases](https://github.com/Molunerfinn/PicGo/releases) | All | - |
+| [Scoop](https://scoop.sh/) | `scoop bucket add helbing https://github.com/helbing/scoop-bucket` & `scoop install picgo` | Windows | Thanks to @helbing |
+| [Chocolatey](https://chocolatey.org/) | `choco install picgo` | Windows | Thanks to @iYato |
+| [Homebrew](https://brew.sh/) | `brew install picgo --cask` | macOS | Thanks to @womeimingzi11 |
+| [AUR](https://aur.archlinux.org/packages/yay) | `yay -S picgo-appimage` | Arch-Linux | Thanks to @houbaron |
 
 ## Snapshots
 
@@ -74,6 +76,7 @@ If you want to learn, develop, modify, or build your customized PicGo, please fo
 2. `git clone https://github.com/Molunerfinn/PicGo.git` and `cd PicGo`.
 3. `npm install` the dependencies.
 4. Need Xcode (MacOS) or VS (Windows).
+5. If you need to contribute code, you can refer to [Contribution Guidelines](https://github.com/Molunerfinn/PicGo/blob/dev/CONTRIBUTING_EN.md)
 
 ### Devement mode
 
@@ -100,6 +103,8 @@ You do not need to do it again if you have done it at the first time. The binary
 ## Related Work
 
 - [vs-picgo](https://github.com/Spades-S/vs-picgo): PicGo for VSCode.
+- [flutter-picgo](https://github.com/PicGo/flutter-picgo)：PicGo Mobile App（Support Android & iOS ）
+- [PicHoro](https://github.com/Kuingsmile/PicHoro)：Another PicGo Mobile App（Android）
 
 ## Sponsor
 

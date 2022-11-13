@@ -5,7 +5,7 @@ sidebarDepth: 3
 ## 快速上手
 
 ::: warning 注意
-请确保你安装了 Node.js， 并且版本 >= 8。
+请确保你安装了 Node.js， 并且版本 >= 16。
 :::
 
 ::: tip 提示
@@ -52,7 +52,9 @@ Mini窗口只支持Windows和Linux，macOS可以使用顶部栏图标。（因�
 
 ![](https://cdn.jsdelivr.net/gh/Molunerfinn/test/sspai/202108282035035.png)
 
-- macOS请在顶部栏区域找到PicGo图标，右键（触摸板双指点按或者鼠标右键）即可找到打开主窗口的菜单。
+- macOS请在顶部栏区域找到PicGo图标，右键（触摸板双指点按或者鼠标右键）即可找到打开主窗口的菜单。或者在 `2.3.1+` 版本可以通过顶部栏窗口的按钮打开：
+
+![](https://pic.molunerfinn.com/picgo/docs/202211131604805.png)
 
 - Linux请在在Mini窗口或者任务栏图标右键 -> 打开`详细窗口`，即可打开主窗口。
 

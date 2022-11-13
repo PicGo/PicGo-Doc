@@ -1,14 +1,14 @@
-# PicGo
+## PicGo is Here
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/New%20LOGO-150.png" alt="">
+  <img src="https://pic.molunerfinn.com/picgo/docs/logo-150.png" alt="">
   <h1>PicGo</h1>
-  <blockquote>图片上传+管理新体验 </blockquote>
+  <blockquote>图片上传+管理新体验</blockquote>
   <a href="https://github.com/Molunerfinn/PicGo/actions">
     <img src="https://img.shields.io/badge/code%20style-standard-green.svg?style=flat-square" alt="">
   </a>
   <a href="https://github.com/Molunerfinn/PicGo/actions">
-    <img src="https://github.com/Molunerfinn/PicGo/workflows/Build/badge.svg" alt="">
+    <img src="https://github.com/Molunerfinn/PicGo/actions/workflows/main.yml/badge.svg" alt="">
   </a>
   <a href="https://github.com/Molunerfinn/PicGo/releases">
     <img src="https://img.shields.io/github/downloads/Molunerfinn/PicGo/total.svg?style=flat-square" alt="">
@@ -18,9 +18,6 @@
   </a>
   <a href="https://github.com/PicGo/bump-version">
     <img src="https://img.shields.io/badge/picgo-convention-blue.svg?style=flat-square" alt="">
-  </a>
-  <a href="https://gitter.im/picgo-all/PicGo?utm_source=share-link&utm_medium=link&utm_campaign=share-link">
-    <img src="https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-66ae93.svg?style=flat-square" alt="">
   </a>
 </div>
 
@@ -53,33 +50,21 @@ PicGo 本体支持如下图床：
 - 支持通过发送 HTTP 请求调用 PicGo 上传（v2.2.0+)
 - 更多功能等你自己去发现，同时也会不断开发新功能
   - 开发进度可以查看 [Projects](https://github.com/Molunerfinn/PicGo/projects)，会同步更新开发进度
-  - 欢迎加入 [官方讨论区](https://github.com/Molunerfinn/PicGo/discussions) 与我交流
+  <!-- - 欢迎加入 [官方讨论区](https://github.com/Molunerfinn/PicGo/discussions) 与我交流 -->
 
 **如果第一次使用，请参考应用 [使用文档](https://picgo.github.io/PicGo-Doc/zh/guide/getting-started.html)。遇到问题了还可以看看 [FAQ](https://github.com/Molunerfinn/PicGo/blob/dev/FAQ.md) 以及被关闭的 [issues](https://github.com/Molunerfinn/PicGo/issues?q=is%3Aissue+is%3Aclosed)。**
 
 ## 下载安装
 
-点击此处下载 [应用](https://github.com/Molunerfinn/PicGo/releases)。
-
-### Windows
-
-Windows 用户请下载最新版本的 `exe` 文件。
-
-**还可以使用 [Scoop](https://scoop.sh/) 来安装 PicGo: `scoop bucket add helbing https://github.com/helbing/scoop-bucket` & `scoop install picgo`。 感谢 @helbing 的贡献！**
-
-**还可以使用 [Chocolatey](https://chocolatey.org/) 来安装 PicGo: `choco install picgo`。 感谢 @iYato 的贡献！**
-
-### macOS
-
-macOS 用户请下载最新版本的 `dmg` 文件。
-
-**还可以使用 [Homebrew](https://brew.sh/) 来安装 PicGo: `brew install picgo --cask`。感谢 @womeimingzi11 的贡献！**
-
-### Linux
-
-Linux 用户请下载 `AppImage` 文件。
-
-**如果你是 Arch 类的 Linux 用户，可以直接通过 `yay -S picgo-appimage` 来安装 PicGo （若是没有则先安装 yay ，是 aur 仓库助手）。感谢 @houbaron 的贡献！**
+| 下载源  | 地址/安装方式  | 平台 | 备注  |
+|---|---|---|---|
+| GitHub Release  | https://github.com/Molunerfinn/PicGo/releases | All | 国内下载速度可能会慢 |
+| [腾讯云COS](https://cloud.tencent.com/product/cos)  | https://github.com/Molunerfinn/PicGo/releases 附在更新日志结尾 | All | 感谢 [腾讯云COS](https://cloud.tencent.com/product/cos) 提供的赞助支持 |
+| [山东大学镜像站](https://mirrors.sdu.edu.cn/) | https://mirrors.sdu.edu.cn/github-release/Molunerfinn_PicGo | All | 感谢 [山东大学镜像站](https://mirrors.sdu.edu.cn/) 提供的镜像支持 |
+| [Scoop](https://scoop.sh/) | `scoop bucket add helbing https://github.com/helbing/scoop-bucket` & `scoop install picgo` | Windows | 感谢 @helbing 的贡献 |
+| [Chocolatey](https://chocolatey.org/) | `choco install picgo` | Windows | 感谢 @iYato 的贡献 |
+| [Homebrew](https://brew.sh/) | `brew install picgo --cask` | macOS | 感谢 @womeimingzi11 的贡献 |
+| [AUR](https://aur.archlinux.org/packages/yay) | `yay -S picgo-appimage` | Arch-Linux | 感谢 @houbaron 的贡献 |
 
 ## 应用截图
 
@@ -99,6 +84,7 @@ Linux 用户请下载 `AppImage` 文件。
 2. `git clone https://github.com/Molunerfinn/PicGo.git` 并进入项目。
 3. `yarn` 下载依赖。注意如果你没有 `yarn`，请去 [官网](https://classic.yarnpkg.com/en/docs/install) 下载安装后再使用。 **用 `npm install` 将导致未知错误！**
 4. Mac 需要有 Xcode 环境，Windows 需要有 VS 环境。
+5. 如果需要贡献代码，可以参考[贡献指南](./CONTRIBUTING.md)。
 
 ### 开发模式
 
@@ -118,8 +104,8 @@ npm run electron:serve # 重新进入开发模式
 **注意**：如果你的网络环境不太好，可能会出现 `electron-builder` 下载 `electron` 二进制文件失败的情况。这个时候需要在 `npm run electron:build` 之前指定一下 `electron` 的源为国内源：
 
 ```bash
-export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
-# 在 Windows 上，则可以使用 set ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/ （无需引号）
+export ELECTRON_MIRROR="https://npmmirror.com/mirrors/electron/"
+# 在 Windows 上，则可以使用 set ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/ （无需引号）
 npm run electron:build
 ```
 
@@ -128,7 +114,8 @@ npm run electron:build
 ## 其他相关
 
 - [vs-picgo](https://github.com/PicGo/vs-picgo)：PicGo 的 VS Code 版。
-- [flutter-picgo](https://github.com/PicGo/flutter-picgo)：PicGo 的手机版（支持 Android 和 iOS ）。
+- [flutter-picgo](https://github.com/PicGo/flutter-picgo)：PicGo 的手机版 App（支持 Android 和 iOS ）。
+- [PicHoro](https://github.com/Kuingsmile/PicHoro)：另一款支持 PicGo 配置的手机版 App（暂时只支持 Android）。
 
 ## 赞助
 
@@ -146,4 +133,4 @@ npm run electron:build
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) from 2017 - Now Molunerfinn
+Copyright (c) 2017 - 2019 Molunerfinn
