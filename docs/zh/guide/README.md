@@ -146,4 +146,4 @@ npm run electron:build
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) from 2017 Molunerfinn
+Copyright (c) from 2017 - Now Molunerfinn

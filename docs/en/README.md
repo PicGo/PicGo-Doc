@@ -10,5 +10,5 @@ features:
   details: Automatically copy links to the clipboard after uploading, support 5 copy and paste formats, making your text editing efficient.
 - title: Plug-in Support
   details: Have plug-ins that support JavaScript development, making PicGo a more powerful and productive tool.
-footer: MIT Licensed | Copyright © 2017 Molunerfinn
+footer: MIT Licensed | Copyright © 2017 - Now Molunerfinn
 ---

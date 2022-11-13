@@ -10,5 +10,5 @@ features:
   details: 上传成功后自动复制链接地址到剪贴板，支持5种复制粘贴格式，让你的文本编辑极致高效。
 - title: 支持插件系统
   details: 支持JavaScript开发的插件，给予插件极大自由度，让PicGo更加强大，成为你得手的效率工具。
-footer: MIT Licensed | Copyright © 2017 Molunerfinn
+footer: MIT Licensed | Copyright © 2017 - Now Molunerfinn
 ---
