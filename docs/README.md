@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/New%20LOGO-150.png
+heroImage: https://pic.molunerfinn.com/picgo/docs/logo-150.png
 actionText: 快速开始 →
 actionLink: /zh/guide/
 features:

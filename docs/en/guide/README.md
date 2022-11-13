@@ -3,7 +3,7 @@
 <div align="center">
   <img src="https://pic.molunerfinn.com/picgo/docs/logo-150.png" alt="">
   <h1>PicGo</h1>
-  <blockquote>New experience of pictures upload + management</blockquote>
+  <blockquote>New Experience of Pictures Uploading and Management</blockquote>
   <a href="https://github.com/Molunerfinn/PicGo/actions">
     <img src="https://img.shields.io/badge/code%20style-standard-green.svg?style=flat-square" alt="">
   </a>

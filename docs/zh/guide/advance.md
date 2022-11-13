@@ -43,7 +43,7 @@ PicGo在`2.2.0`版本开始内置了一个小型的服务器，用于接收来�
 }
 ```
 
-![](https://cdn.jsdelivr.net/gh/Molunerfinn/test/PicGo/picgo-server-upload-clipboard-file.png)
+![](https://pic.molunerfinn.com/picgo/docs/picgo-server-upload-clipboard-file.png)
 
 ### HTTP调用上传具体路径图片
 
@@ -51,7 +51,7 @@ PicGo在`2.2.0`版本开始内置了一个小型的服务器，用于接收来�
 - url: `http://127.0.0.1:36677/upload` （此处以默认配置为例）
 - request body: `{list: ['xxx.jpg']}` 必须是JSON格式
 
-![](https://user-images.githubusercontent.com/12621342/71626614-1b359880-2c29-11ea-8efe-330f15116268.png)
+![](https://pic.molunerfinn.com/picgo/docs/71626614-1b359880-2c29-11ea-8efe-330f15116268.png)
 
 
 ```json
@@ -67,6 +67,6 @@ PicGo在`2.2.0`版本开始内置了一个小型的服务器，用于接收来�
 
 可以通过点击主窗口左下角信息栏按钮，找到「生成图床配置二维码」菜单
 
-![](https://cdn.jsdelivr.net/gh/Molunerfinn/test/sspai/202108282131459.png)
+![](https://pic.molunerfinn.com/picgo/docs/202108282131459.png)
 
 然后通过 flutter-picgo 的扫码功能，一键导入图床配置。

@@ -22,7 +22,7 @@ module.exports = {
     '/en/': {
       lang: 'English',
       title: 'PicGo',
-      description: 'New Experience of Image Uploading and Management'
+      description: 'New Experience of Pictures Uploading and Management'
     }
   },
   description: '图片上传、管理新体验',
