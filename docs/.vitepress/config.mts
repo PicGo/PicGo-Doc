@@ -30,10 +30,10 @@ const enSidebar = [
   {
     text: 'Guidelines',
     items: [
-      { text: 'Overview', link: '/en/guide/' },
-      { text: 'Getting Started', link: '/en/guide/getting-started' },
-      { text: 'Configuration', link: '/en/guide/config' },
-      { text: 'Advanced Usage', link: '/en/guide/advance' }
+      { text: 'Overview', link: '/en/guide/', items: getNestedSidebarItems('/en/guide/'), collapsed: true },
+      { text: 'Getting Started', link: '/en/guide/getting-started', items: getNestedSidebarItems('/en/guide/getting-started'), collapsed: true },
+      { text: 'Configuration', link: '/en/guide/config', items: getNestedSidebarItems('/en/guide/config'), collapsed: true },
+      { text: 'Advanced Usage', link: '/en/guide/advance', items: getNestedSidebarItems('/en/guide/advance'), collapsed: true }
     ]
   }
 ]
