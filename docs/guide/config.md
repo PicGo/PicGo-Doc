@@ -461,7 +461,7 @@ https://registry.npm.taobao.org/
 
 2.2版本之后，PicGo内部会默认开启一个小型的服务器，用于配合其他应用来调用PicGo进行上传。监听的地址推荐就默认的 `127.0.0.1` （本机），端口推荐默认的 `36677`。当然如果你不想要开启也可以选择关闭，只不过推荐你可以开启~可以配合一些第三方工具实现很方便的上传工作流。
 
-关于Server的调用可以参考[高级技巧](/zh/guide/advance.html#PicGo-Server的使用)的说明。
+关于Server的调用可以参考[高级技巧](/guide/advance.html#PicGo-Server的使用)的说明。
 
 ![](https://pic.molunerfinn.com/picgo/docs/picgo-server.png)
 

@@ -52,7 +52,7 @@ PicGo 本体支持如下图床：
   - 开发进度可以查看 [Projects](https://github.com/Molunerfinn/PicGo/projects)，会同步更新开发进度
   <!-- - 欢迎加入 [官方讨论区](https://github.com/Molunerfinn/PicGo/discussions) 与我交流 -->
 
-**如果第一次使用，请参考应用 [使用文档](https://picgo.github.io/PicGo-Doc/zh/guide/getting-started.html)。遇到问题了还可以看看 [FAQ](https://github.com/Molunerfinn/PicGo/blob/dev/FAQ.md) 以及被关闭的 [issues](https://github.com/Molunerfinn/PicGo/issues?q=is%3Aissue+is%3Aclosed)。**
+**如果第一次使用，请参考应用 [使用文档](https://picgo.github.io/PicGo-Doc/guide/getting-started.html)。遇到问题了还可以看看 [FAQ](https://github.com/Molunerfinn/PicGo/blob/dev/FAQ.md) 以及被关闭的 [issues](https://github.com/Molunerfinn/PicGo/issues?q=is%3Aissue+is%3Aclosed)。**
 
 ## 下载安装
 
@@ -84,7 +84,7 @@ PicGo 本体支持如下图床：
 2. `git clone https://github.com/Molunerfinn/PicGo.git` 并进入项目。
 3. `yarn` 下载依赖。注意如果你没有 `yarn`，请去 [官网](https://classic.yarnpkg.com/en/docs/install) 下载安装后再使用。 **用 `npm install` 将导致未知错误！**
 4. Mac 需要有 Xcode 环境，Windows 需要有 VS 环境。
-5. 如果需要贡献代码，可以参考[贡献指南](./CONTRIBUTING.md)。
+5. 如果需要贡献代码，可以参考[贡献指南](https://github.com/Molunerfinn/PicGo/blob/dev/CONTRIBUTING.md)。
 
 ### 开发模式
 

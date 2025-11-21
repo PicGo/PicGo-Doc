@@ -61,5 +61,7 @@ typings/
 .next
 
 docs/.vuepress/dist
+docs/.vitepress/dist
+docs/.vitepress/cache
 
 .temp/

@@ -39,11 +39,11 @@ Currently, PicGo supports the following Img:
 
 Support MacOS, Windows 64-bit (>= v1.3.1), Linux (>= v1.6.0).
 
-You can use the shortcut `command+shift+p` (MacOS) or `control+shift+p` (Windows\Linux) to upload the first image in your clipboard, and define the customized shortcuts of PicGo (view [Configuration](/zh/guide/config.html) for more information).
+You can use the shortcut `command+shift+p` (MacOS) or `control+shift+p` (Windows\Linux) to upload the first image in your clipboard, and define the customized shortcuts of PicGo (view [Configuration](/guide/config.html) for more information).
 
 View [Projects](https://github.com/Molunerfinn/PicGo/projects) to see the progress of PicGo development, which will be updated synchronously.
 
-**If you are using PicGo for the first time, please refer to [Quickstart](/zh/guide/getting-started.html) to see how to use it. You can also refer to [FAQ](https://github.com/Molunerfinn/PicGo/blob/dev/FAQ.md) and closed [issues](https://github.com/Molunerfinn/PicGo/issues?q=is%3Aissue+is%3Aclosed) when you meet a problem.**
+**If you are using PicGo for the first time, please refer to [Quickstart](/guide/getting-started.html) to see how to use it. You can also refer to [FAQ](https://github.com/Molunerfinn/PicGo/blob/dev/FAQ.md) and closed [issues](https://github.com/Molunerfinn/PicGo/issues?q=is%3Aissue+is%3Aclosed) when you meet a problem.**
 
 ## Installation
 
