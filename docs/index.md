@@ -3,7 +3,6 @@ layout: home
 hero:
   name: PicGo
   text: 图片上传、管理新体验
-  tagline: 一个用于快速上传图片并获取图片链接的工具
   image:
     src: https://pic.molunerfinn.com/picgo/docs/logo-150.png
     alt: PicGo Logo

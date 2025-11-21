@@ -1,4 +1,5 @@
 import { defineConfig, DefaultTheme } from 'vitepress'
+import { getNestedSidebarItems } from './utils/sidebar'
 
 const EDIT_LINK_PATTERN = 'https://github.com/PicGo/PicGo-Doc/edit/master/docs/:path'
 
@@ -7,14 +8,15 @@ const zhNav = [
   { text: '高级技巧', link: '/guide/advance' }
 ]
 
+
 const zhSidebar: DefaultTheme.SidebarItem[] = [
   {
     text: '指南',
     items: [
-      { text: '介绍', link: '/guide/' },
-      { text: '快速开始', link: '/guide/getting-started' },
-      { text: '配置', link: '/guide/config', collapsed: true },
-      { text: '高级技巧', link: '/guide/advance' }
+      { text: '介绍', link: '/guide/', items: getNestedSidebarItems('/guide/'), collapsed: true },
+      { text: '快速开始', link: '/guide/getting-started', items: getNestedSidebarItems('/guide/getting-started'), collapsed: true },
+      { text: '配置', link: '/guide/config', items: getNestedSidebarItems('/guide/config'), collapsed: true },
+      { text: '高级技巧', link: '/guide/advance', items: getNestedSidebarItems('/guide/advance'), collapsed: true }
     ]
   }
 ]
