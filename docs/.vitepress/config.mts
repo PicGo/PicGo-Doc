@@ -3,9 +3,19 @@ import { getNestedSidebarItems } from './utils/sidebar'
 
 const EDIT_LINK_PATTERN = 'https://github.com/PicGo/PicGo-Doc/edit/master/docs/:path'
 
+const commonNavList = [
+  {
+    text: 'PicGo-Core', link: 'https://github.com/PicGo/PicGo-Core',
+  },
+  {
+    text: 'Awesome-PicGo', link: 'https://github.com/PicGo/Awesome-PicGo'
+  }
+]
+
 const zhNav = [
   { text: '指南', link: '/guide/' },
-  { text: '高级技巧', link: '/guide/advance' }
+  { text: '高级技巧', link: '/guide/advance' },
+  ...commonNavList
 ]
 
 
@@ -23,7 +33,8 @@ const zhSidebar: DefaultTheme.SidebarItem[] = [
 
 const enNav = [
   { text: 'Guidelines', link: '/en/guide/' },
-  { text: 'Advance Usage', link: '/en/guide/advance' }
+  { text: 'Advance Usage', link: '/en/guide/advance' },
+  ...commonNavList
 ]
 
 const enSidebar = [
