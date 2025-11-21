@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig, DefaultTheme } from 'vitepress'
 
 const EDIT_LINK_PATTERN = 'https://github.com/PicGo/PicGo-Doc/edit/master/docs/:path'
 
@@ -7,13 +7,13 @@ const zhNav = [
   { text: '高级技巧', link: '/guide/advance' }
 ]
 
-const zhSidebar = [
+const zhSidebar: DefaultTheme.SidebarItem[] = [
   {
     text: '指南',
     items: [
       { text: '介绍', link: '/guide/' },
       { text: '快速开始', link: '/guide/getting-started' },
-      { text: '配置', link: '/guide/config' },
+      { text: '配置', link: '/guide/config', collapsed: true },
       { text: '高级技巧', link: '/guide/advance' }
     ]
   }
@@ -44,8 +44,12 @@ const zhThemeConfig = {
   editLink: {
     pattern: EDIT_LINK_PATTERN,
     text: '在 GitHub 上编辑此页'
+  },
+  outline: {
+    label: '本页目录',
+    level: 'deep'
   }
-}
+} as const
 
 const enThemeConfig = {
   nav: enNav,
@@ -55,8 +59,12 @@ const enThemeConfig = {
   editLink: {
     pattern: EDIT_LINK_PATTERN,
     text: 'Edit this page on GitHub'
+  },
+  outline: {
+    label: 'On this page',
+    level: 'deep'
   }
-}
+} as const
 
 export default defineConfig({
   title: 'PicGo',
