@@ -1,7 +1,3 @@
----
-sidebarDepth: 3
----
-
 # Configuration
 
 The configuration of PicGo varies from system to system.
@@ -26,6 +22,10 @@ In Linux and MacOS, you can find the configuration at:
 
 PicGo's upload area supports drag and drop or open your folder to upload images.
 
+### All-format Upload <Badge text="2.4.0+" />
+
+Since `2.4.0`, PicGo supports the "all-format upload" feature, which means you can drag non-image files into the upload area as well.
+
 ## Album Area
 
 PicGo's album area supports to view all images you have uploaded. You can click on the image to preview. You can also click the icon below to copy the image link or delete the image (this will delete the local data to make your images disappear in your album area)
@@ -41,6 +41,16 @@ If you need to change the URL of your image after uploading, such as changing HT
 You can select the image link format in the album area since PicGo 2.0:
 
 ![](https://user-images.githubusercontent.com/12621342/50515502-17d07400-0ae0-11e9-80b9-c38f25b64922.png)
+
+### Bulk Edit Image Domains <Badge text="2.4.0+" />
+
+`2.4.0` adds a bulk edit feature for domains inside the album area. For example, when you have multiple URLs that start with `https://www.a.com/...` and you want to switch them all to `www.b.com`, you can select those images and run this action.
+
+::: warning Note
+You have to select the images before running the bulk edit. Use the ImgBed filter to quickly limit the scope.
+:::
+
+![](https://github.com/Molunerfinn/PicGo/assets/12621342/ee314dfc-7699-4ceb-8638-cafe7948bd5a)
 
 ## Img Area
 
@@ -102,9 +112,11 @@ The configuration items:
   "bucket": "",                               // storage bucket, note that v4 is different from v5 
   "appId": "",
   "area": "",                                 // storage area
-  "path": ""                                  // storage path
-  "customUrl": "", 														// customized domain
-  "version": "v5" | "v4" 											// COS version
+  "path": "",                                  // storage path
+  "customUrl": "",                             // customized domain
+  "version": "v5" | "v4",                     // COS version
+  "endpoint": "",                              // Tencent Cloud endpoint, e.g. cos.accelerate.myqcloud.com
+  "slim": ""                                   // whether to enable Smart Compression
 }
 ```
 
@@ -153,6 +165,8 @@ The bucket name of COS v5 is formatted as `bucket-appId` like `xxxx-12312313`, a
 ![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/choose_v5.png)
 
 `Set as Default Img`, so that your Img is Tencent by default.
+
+**4.** *(Optional)* PicGo `2.4.0` adds `endpoint` and Smart Compression settings for COS. Configure them only when you need to use Tencent Cloud's endpoint feature or the paid Slim service.
 
 
 ### Upyun Cloud
@@ -284,11 +298,23 @@ Generate your clientId [here](https://api.imgur.com/oauth2/addclient) after Imgu
 
 **Note:** Imgur restricts IP and requests in mainland China. If clientId is correct, configure the proxy setting when unable to upload images. Only HTTP proxies are supported by default, so you can consider using SM.MS as an alternative.
 
+### Multiple Configurations per Img <Badge text="2.4.0+" />
+
+Since `2.4.0`, PicGo lets you create more than one configuration for the same ImgBed. Pick the configuration you want to use before uploading. Thanks to [@STDSuperman](https://github.com/STDSuperman) for the contribution!
+
+::: warning Note
+Remember to select the configuration you need; otherwise the new settings will not take effect.
+:::
+
+![](https://user-images.githubusercontent.com/44311619/203093104-9537e08a-2ef0-450d-a59d-c470dbcdd6c8.png)
+
+You can also choose the desired configuration in the upload panel:
+
+![](https://user-images.githubusercontent.com/12621342/210804413-4f78804f-a451-4ca5-93a3-63d461261b18.png)
+
 ### Other Imgs
 
 PicGo will no longer add other Imgs support. If you have other Img upload requirements, please refer to [PicGo-Core](https://picgo.github.io/PicGo-Core-Doc/), and develop other third-party plug-ins!
-
------
 
 ## PicGo setting
 
@@ -411,6 +437,18 @@ Since v2.2, a small server is turned on by default to coordinate with other appl
 About how to use PicGo server, you can refer to [Advanced Usage](/en/guide/advance.html).
 
 ![](https://cdn.jsdelivr.net/gh/Molunerfinn/test/test/picgo-server.png)
+
+### Launch Mode <Badge text="2.4.0+" />
+
+Decide whether PicGo should open the main window on launch. All platforms support `Silent launch` (default) and `Open the main window`, and Windows/Linux additionally offer `Open the Mini window`.
+
+### Show Dock Icon <Badge text="2.4.0+" />
+
+On macOS you can toggle whether PicGo keeps an icon in the Dock.
+
+### URL Encoding When Copying <Badge text="2.4.0+" />
+
+All built-in Imgs already escape URLs correctly. However, some third-party plug-ins or outputs with Chinese characters might require manual control. Use this switch to decide whether PicGo should URL-encode links before copying them.
 
 ## Plug-in Setting <Badge text="2.0.0+" /> 
 

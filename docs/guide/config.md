@@ -1,6 +1,3 @@
----
-sidebarDepth: 3
----
 # 配置手册
 
 PicGo的配置文件在不同系统里是不一样的。
@@ -41,6 +38,10 @@ PS: 如何打开本窗口，请参考[「快速入门」](./getting-started.md#�
 
 ![](https://pic.molunerfinn.com/picgo/docs/202108282058950.png)
 
+### 全格式上传 <Badge text="2.4.0+" />
+
+从 `2.4.0` 版本开始，PicGo 支持「全格式上传」功能。你可以拖动非图片文件上传了。
+
 ## 相册区
 
 支持查看你上传成功的所有图片。点击图片可以预览。点击图片下面的图标可以复制链接或者删除图片（只是删除本地数据，使其不在相册区里出现）
@@ -65,6 +66,17 @@ PS: 如何打开本窗口，请参考[「快速入门」](./getting-started.md#�
 ![](https://pic.molunerfinn.com/picgo/docs/202108282136783.png)
 
 同时，也支持简单的 `shift` 键跨图片多选。
+
+### 批量修改图片域名 <Badge text="2.4.0+" />
+
+从 `2.4.0` 版本开始，PicGo 支持批量修改相册区图片的域名功能。例如，你有一批图片都是 `https://www.a.com/...` 打头的 URL，你想把 `www.a.com` 批量修改成 `www.b.com` ，就可以用这个功能。
+
+::: warning 注意
+需要先选中指定的图片，然后会根据已选中的图片进行修改，你可以通过图床筛选功能只筛选出需要修改的图片。
+:::
+
+![](https://github.com/Molunerfinn/PicGo/assets/12621342/ee314dfc-7699-4ceb-8638-cafe7948bd5a)
+
 
 ## 图床区
 
@@ -130,7 +142,9 @@ PS: 如何打开本窗口，请参考[「快速入门」](./getting-started.md#�
   "area": "", // 存储区域，例如ap-beijing-1
   "path": "", // 自定义存储路径，比如img/
   "customUrl": "", // 自定义域名，注意要加http://或者https://
-  "version": "v5" | "v4" // COS版本，v4或者v5
+  "version": "v5" | "v4", // COS版本，v4或者v5
+  "endpoint": "", // 腾讯云的 endpoint 配置，比如 cos.accelerate.myqcloud.com。 参考 https://cloud.tencent.com/document/product/436/10976，配置后，会忽略 customUrl
+  "slim": "" // 是否开启极智压缩
 }
 ```
 
@@ -184,6 +198,7 @@ v5版本的存储桶名称格式是`bucket-appId`，类似于`xxxx-12312313`。�
 
 然后记得点击`设为默认图床`，这样上传才会默认走的是腾讯云COS。
 
+**4。** 【可选】 2.4.0 新增 endpoint 和 极智压缩（需要额外收费）的配置
 
 ### 又拍云
 
@@ -322,11 +337,23 @@ v5版本的存储桶名称格式是`bucket-appId`，类似于`xxxx-12312313`。�
 
 **注意**：imgur貌似对中国大陆的IP和请求做出了限制，所以如果clientId没错的情况下无法上传图片的时候，可以考虑配置代理设置。默认只支持HTTP代理。如果觉得设置麻烦的可以考虑使用SM.MS图床。
 
+### 一个图床多份配置 <Badge text="2.4.0+" />
+
+从 `2.4.0` 版本开始，PicGo 支持为同一个图床配置多份不同的配置。这样你就可以在上传的时候选择使用哪一份配置来上传图片了。感谢 [@STDSuperman](https://github.com/STDSuperman) 的贡献！
+
+::: warning 注意
+设置完成后记得选中对应的配置才能生效。
+:::
+
+![](https://user-images.githubusercontent.com/44311619/203093104-9537e08a-2ef0-450d-a59d-c470dbcdd6c8.png)
+
+同时在上传的时候也可以选择对应的配置：
+
+![](https://user-images.githubusercontent.com/12621342/210804413-4f78804f-a451-4ca5-93a3-63d461261b18.png)
+
 ### 更多其他图床
 
 本体将不再增加其他图床支持，如果你有其他图床的上传需求，请自行参考[PicGo-Core](https://picgo.github.io/PicGo-Core-Doc/)，为PicGo开发第三方图床插件吧！
-
------
 
 ## PicGo设置
 
@@ -464,6 +491,19 @@ https://registry.npm.taobao.org/
 关于Server的调用可以参考[高级技巧](/guide/advance.html#PicGo-Server的使用)的说明。
 
 ![](https://pic.molunerfinn.com/picgo/docs/picgo-server.png)
+
+### 启动模式 <Badge text="2.4.0+" />
+
+可以设置启动的时候是否要打开窗口。全平台支持 `静默启动`（默认值） & `打开主窗口`，Windows 和 Linux 额外支持 `打开 Mini 窗口`。
+
+### 显示 Docker 栏图标 <Badge text="2.4.0+" />
+
+从 2.4.0 开始，在 macbook 上你可以选择开启 Docker 栏图标，这样 Docker 栏里就会出现 PicGo 的图标。
+
+### 输出（复制）的时候进行 URL 转义 <Badge text="2.4.0+" />
+
+默认情况下，PicGo 的内置图床都会对 URL 进行正确的转义（不受这个开关影响），确保带有特殊符号的 URL 也能被浏览器正确打开。不过有的时候一些第三方插件没有处理好，或者有些中文输出的 URL 你不希望转义，那么你可以尝试启用或者关闭这个功能。
+
 
 ## 插件设置 <Badge text="2.0.0+" /> 
 

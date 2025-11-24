@@ -1,9 +1,8 @@
-## PicGo is Here
-
 <div align="center">
-  <img src="https://pic.molunerfinn.com/picgo/docs/logo-150.png" alt="">
+  <img src="https://pic.molunerfinn.com/picgo/docs/logo-150.png" alt="" style="width:150px;height:150px;"/>
   <h1>PicGo</h1>
   <blockquote>图片上传+管理新体验</blockquote>
+  <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 12px;">
   <a href="https://github.com/Molunerfinn/PicGo/actions">
     <img src="https://img.shields.io/badge/code%20style-standard-green.svg?style=flat-square" alt="">
   </a>
@@ -19,6 +18,7 @@
   <a href="https://github.com/PicGo/bump-version">
     <img src="https://img.shields.io/badge/picgo-convention-blue.svg?style=flat-square" alt="">
   </a>
+  </div>
 </div>
 
 ## 应用概述
@@ -56,15 +56,14 @@ PicGo 本体支持如下图床：
 
 ## 下载安装
 
-| 下载源  | 地址/安装方式  | 平台 | 备注  |
-|---|---|---|---|
-| GitHub Release  | https://github.com/Molunerfinn/PicGo/releases | All | 国内下载速度可能会慢 |
-| [腾讯云COS](https://cloud.tencent.com/product/cos)  | https://github.com/Molunerfinn/PicGo/releases 附在更新日志结尾 | All | 感谢 [腾讯云COS](https://cloud.tencent.com/product/cos) 提供的赞助支持 |
-| [山东大学镜像站](https://mirrors.sdu.edu.cn/) | https://mirrors.sdu.edu.cn/github-release/Molunerfinn_PicGo | All | 感谢 [山东大学镜像站](https://mirrors.sdu.edu.cn/) 提供的镜像支持 |
-| [Scoop](https://scoop.sh/) | `scoop bucket add helbing https://github.com/helbing/scoop-bucket` & `scoop install picgo` | Windows | 感谢 @helbing 的贡献 |
-| [Chocolatey](https://chocolatey.org/) | `choco install picgo` | Windows | 感谢 @iYato 的贡献 |
-| [Homebrew](https://brew.sh/) | `brew install picgo --cask` | macOS | 感谢 @womeimingzi11 的贡献 |
-| [AUR](https://aur.archlinux.org/packages/yay) | `yay -S picgo-appimage` | Arch-Linux | 感谢 @houbaron 的贡献 |
+| 下载源                                        | 地址/安装方式                                                                              | 平台       | 备注                                                              |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------ | ---------- | ----------------------------------------------------------------- |
+| GitHub Release                                | https://github.com/Molunerfinn/PicGo/releases                                              | All        | 国内下载速度可能会慢                                              |
+| [山东大学镜像站](https://mirrors.sdu.edu.cn/) | https://mirrors.sdu.edu.cn/github-release/Molunerfinn_PicGo                                | All        | 感谢 [山东大学镜像站](https://mirrors.sdu.edu.cn/) 提供的镜像支持 |
+| [Scoop](https://scoop.sh/)                    | `scoop bucket add helbing https://github.com/helbing/scoop-bucket` & `scoop install picgo` | Windows    | 感谢 @helbing 的贡献                                              |
+| [Chocolatey](https://chocolatey.org/)         | `choco install picgo`                                                                      | Windows    | 感谢 @iYato 的贡献                                                |
+| [Homebrew](https://brew.sh/)                  | `brew install picgo --cask`                                                                | macOS      | 感谢 @womeimingzi11 的贡献                                        |
+| [AUR](https://aur.archlinux.org/packages/yay) | `yay -S picgo-appimage`                                                                    | Arch-Linux | 感谢 @houbaron 的贡献                                             |
 
 ## 应用截图
 

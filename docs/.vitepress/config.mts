@@ -23,9 +23,9 @@ const zhSidebar: DefaultTheme.SidebarItem[] = [
   {
     text: '指南',
     items: [
-      { text: '介绍', link: '/guide/', items: getNestedSidebarItems('/guide/'), collapsed: true },
+      { text: '应用介绍', link: '/guide/', items: getNestedSidebarItems('/guide/'), collapsed: true },
       { text: '快速开始', link: '/guide/getting-started', items: getNestedSidebarItems('/guide/getting-started'), collapsed: true },
-      { text: '配置', link: '/guide/config', items: getNestedSidebarItems('/guide/config'), collapsed: true },
+      { text: '配置手册', link: '/guide/config', items: getNestedSidebarItems('/guide/config'), collapsed: true },
       { text: '高级技巧', link: '/guide/advance', items: getNestedSidebarItems('/guide/advance'), collapsed: true }
     ]
   }
@@ -41,9 +41,9 @@ const enSidebar = [
   {
     text: 'Guidelines',
     items: [
-      { text: 'Overview', link: '/en/guide/', items: getNestedSidebarItems('/en/guide/'), collapsed: true },
+      { text: 'App Overview', link: '/en/guide/', items: getNestedSidebarItems('/en/guide/'), collapsed: true },
       { text: 'Getting Started', link: '/en/guide/getting-started', items: getNestedSidebarItems('/en/guide/getting-started'), collapsed: true },
-      { text: 'Configuration', link: '/en/guide/config', items: getNestedSidebarItems('/en/guide/config'), collapsed: true },
+      { text: 'Configuration Manual', link: '/en/guide/config', items: getNestedSidebarItems('/en/guide/config'), collapsed: true },
       { text: 'Advanced Usage', link: '/en/guide/advance', items: getNestedSidebarItems('/en/guide/advance'), collapsed: true }
     ]
   }
