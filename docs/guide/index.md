@@ -120,6 +120,10 @@ npm run electron:build
 
 如果你喜欢 PicGo 并且它对你确实有帮助，欢迎给我打赏一杯咖啡哈~
 
+GitHub Sponsors：
+
+[![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/Molunerfinn)
+
 支付宝：
 
 ![](https://user-images.githubusercontent.com/12621342/34188165-e7cdf372-e56f-11e7-8732-1338c88b9bb7.jpg)
@@ -127,6 +131,8 @@ npm run electron:build
 微信：
 
 ![](https://user-images.githubusercontent.com/12621342/34188201-212cda84-e570-11e7-9b7a-abb298699d85.jpg)
+
+
 
 ## License
 

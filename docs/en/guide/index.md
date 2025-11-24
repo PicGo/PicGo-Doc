@@ -58,14 +58,14 @@ PicGo supports macOS, Windows 64-bit (>= v1.3.1), and Linux (>= v1.6.0).
 You can download the latest `dmg` (MacOS), `exe` (Windows) or `AppImage` (Linux).
 
 
-| Source | URL/Installation | Platform | Remark |
-| --------------------------------------------- | ------------------------------------------------------------------------------------------ | ---------- | ----------------------------------------------------------------- |
-| GitHub Release | https://github.com/Molunerfinn/PicGo/releases                                              | All        | Download speed may be slow in mainland China                     |
+| Source                                                    | URL/Installation                                                                           | Platform   | Remark                                                                                     |
+| --------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ---------- | ------------------------------------------------------------------------------------------ |
+| GitHub Release                                            | https://github.com/Molunerfinn/PicGo/releases                                              | All        | Download speed may be slow in mainland China                                               |
 | [Shandong University Mirror](https://mirrors.sdu.edu.cn/) | https://mirrors.sdu.edu.cn/github-release/Molunerfinn_PicGo                                | All        | Thanks to [Shandong University Mirror](https://mirrors.sdu.edu.cn/) for hosting the mirror |
-| [Scoop](https://scoop.sh/) | `scoop bucket add helbing https://github.com/helbing/scoop-bucket` & `scoop install picgo` | Windows    | Thanks to @helbing                                              |
-| [Chocolatey](https://chocolatey.org/) | `choco install picgo`                                                                      | Windows    | Thanks to @iYato                                                |
-| [Homebrew](https://brew.sh/) | `brew install picgo --cask`                                                                | macOS      | Thanks to @womeimingzi11                                        |
-| [AUR](https://aur.archlinux.org/packages/yay) | `yay -S picgo-appimage`                                                                    | Arch-Linux | Thanks to @houbaron                                             |
+| [Scoop](https://scoop.sh/)                                | `scoop bucket add helbing https://github.com/helbing/scoop-bucket` & `scoop install picgo` | Windows    | Thanks to @helbing                                                                         |
+| [Chocolatey](https://chocolatey.org/)                     | `choco install picgo`                                                                      | Windows    | Thanks to @iYato                                                                           |
+| [Homebrew](https://brew.sh/)                              | `brew install picgo --cask`                                                                | macOS      | Thanks to @womeimingzi11                                                                   |
+| [AUR](https://aur.archlinux.org/packages/yay)             | `yay -S picgo-appimage`                                                                    | Arch-Linux | Thanks to @houbaron                                                                        |
 
 ## Snapshots
 
@@ -118,6 +118,10 @@ You do not need to do it again if you have done it at the first time. The binary
 ## Sponsor
 
 If you like PicGo and it really helps and want to sponsor us a cup of coffee, you can use:
+
+GitHub Sponsors：
+
+[![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/Molunerfinn)
 
 Alipay: 
 

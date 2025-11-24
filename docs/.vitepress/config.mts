@@ -5,6 +5,9 @@ const EDIT_LINK_PATTERN = 'https://github.com/PicGo/PicGo-Doc/edit/master/docs/:
 
 const commonNavList = [
   {
+    text: 'Download', link: 'https://github.com/Molunerfinn/PicGo/releases',
+  },
+  {
     text: 'PicGo-Core', link: 'https://github.com/PicGo/PicGo-Core',
   },
   {
@@ -13,7 +16,6 @@ const commonNavList = [
 ]
 
 const zhNav = [
-  { text: '指南', link: '/guide/' },
   { text: '高级技巧', link: '/guide/advance' },
   ...commonNavList
 ]
@@ -32,7 +34,6 @@ const zhSidebar: DefaultTheme.SidebarItem[] = [
 ]
 
 const enNav = [
-  { text: 'Guidelines', link: '/en/guide/' },
   { text: 'Advance Usage', link: '/en/guide/advance' },
   ...commonNavList
 ]
@@ -93,6 +94,7 @@ export default defineConfig({
     ]
   ],
   themeConfig: {
+    logo: 'https://pics.molunerfinn.com/doc/logo.png',
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Molunerfinn/PicGo' }
     ],

@@ -11,6 +11,9 @@ hero:
     - theme: brand
       text: 快速开始
       link: /guide/
+    - theme: alt
+      text: GitHub
+      link: https://github.com/Molunerfinn/PicGo
 features:
   - title: 灵活上传
     details: 主窗口支持拖拽、选择图片上传；支持读取剪贴板的第一张图片快捷上传。macOS支持顶部栏拖拽上传。
