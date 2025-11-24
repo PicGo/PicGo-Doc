@@ -1,7 +1,3 @@
----
-sidebarDepth: 3
----
-
 # Configuration
 
 The configuration of PicGo varies from system to system.
@@ -12,7 +8,7 @@ The configuration of PicGo varies from system to system.
 
 In Windows, you can find the configuration at:
 
-`C:\Users\你的用户名\AppData\Roaming\picgo\data.json`
+`C:\Users\[Your user name]\AppData\Roaming\picgo\data.json`
 
 In Linux and MacOS, you can find the configuration at:
 
@@ -20,11 +16,15 @@ In Linux and MacOS, you can find the configuration at:
 
 ## Basic Operations
 
-![2017-12-09 00 13 05-min](https://user-images.githubusercontent.com/12621342/34242857-d177930a-e658-11e7-9688-7405851dd5e5.gif)
+![2017-12-09 00 13 05-min](https://pics.molunerfinn.com/doc/34242857-d177930a-e658-11e7-9688-7405851dd5e5.gif)
 
 ## Upload Area
 
 PicGo's upload area supports drag and drop or open your folder to upload images.
+
+### All-format Upload <Badge text="2.4.0+" />
+
+Since `2.4.0`, PicGo supports the "all-format upload" feature, which means you can drag non-image files into the upload area as well.
 
 ## Album Area
 
@@ -34,15 +34,25 @@ PicGo's album area supports to view all images you have uploaded. You can click 
 
 If you need to change the URL of your image after uploading, such as changing HTTP to HTTPS or adding URL suffix (e.g. `?imgslim` by Qiniu Cloud). PicGo can make it easier for you to manage you images.
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/picgo_edit_info.gif)
+![](https://pics.molunerfinn.com/doc/picgo_edit_info.gif)
 
 ### Select the image link format (v2.0)
 
 You can select the image link format in the album area since PicGo 2.0:
 
-![](https://user-images.githubusercontent.com/12621342/50515502-17d07400-0ae0-11e9-80b9-c38f25b64922.png)
+![](https://pics.molunerfinn.com/doc/50515502-17d07400-0ae0-11e9-80b9-c38f25b64922.png)
 
-## Img Area
+### Bulk Edit Image Domains <Badge text="2.4.0+" />
+
+`2.4.0` adds a bulk edit feature for domains inside the album area. For example, when you have multiple URLs that start with `https://www.a.com/...` and you want to switch them all to `www.b.com`, you can select those images and run this action.
+
+::: warning Note
+You have to select the images before running the bulk edit. Use the image host filter to quickly limit the scope.
+:::
+
+![](https://pics.molunerfinn.com/doc/ee314dfc-7699-4ceb-8638-cafe7948bd5a)
+
+## Image Host Area
 
 ### SM.MS <Badge text="2.3.0+" /> 
 
@@ -57,9 +67,9 @@ The configuration item:
 
 Sign up and log in [sm.ms](https://sm.ms/home/apitoken) to get your token.
 
-![](https://cdn.jsdelivr.net/gh/Molunerfinn/test/picgo/20200307182127.png)
+![](https://pics.molunerfinn.com/doc/20200307182127.png)
 
-### Qiuniu Img
+### Qiuniu Image Host
 
 The configuration items:
 
@@ -75,19 +85,19 @@ The configuration items:
 }
 ```
 
-![image](https://user-images.githubusercontent.com/12621342/34243072-191cc4ae-e65a-11e7-99f6-ebe6b7dcaf86.png)
+![image](https://pics.molunerfinn.com/doc/34243072-191cc4ae-e65a-11e7-99f6-ebe6b7dcaf86.png)
 
 You can find your user key in [your Qiniu portal](https://portal.qiniu.com/user/key). Note that, you should determine your own storage space:
 
-![image](https://user-images.githubusercontent.com/12621342/34243146-69af085a-e65a-11e7-965c-2a3d15856480.png)
+![image](https://pics.molunerfinn.com/doc/34243146-69af085a-e65a-11e7-965c-2a3d15856480.png)
 
 You need to fill the `area` in the configuration file according to [this](https://developer.qiniu.com/kodo/1671/region-endpoint-fq):
 
-![image](https://user-images.githubusercontent.com/12621342/50533009-e5189100-0b5c-11e9-9812-438576990828.png)
+![image](https://pics.molunerfinn.com/doc/50533009-e5189100-0b5c-11e9-9812-438576990828.png)
 
 When configuring your storage area, you need to set the upload address to Qiniu Clould or your customized domain name (`http://` or `https://` is required):
 
-![image](https://user-images.githubusercontent.com/12621342/34245183-c38d9766-e663-11e7-964e-2d7a9ab9e9e9.png)
+![image](https://pics.molunerfinn.com/doc/34245183-c38d9766-e663-11e7-964e-2d7a9ab9e9e9.png)
 
 The URL suffix is usually used when you set some processing parameters using image processing, such as the image slim.
 
@@ -102,9 +112,11 @@ The configuration items:
   "bucket": "",                               // storage bucket, note that v4 is different from v5 
   "appId": "",
   "area": "",                                 // storage area
-  "path": ""                                  // storage path
-  "customUrl": "", 														// customized domain
-  "version": "v5" | "v4" 											// COS version
+  "path": "",                                  // storage path
+  "customUrl": "",                             // customized domain
+  "version": "v5" | "v4",                     // COS version
+  "endpoint": "",                              // Tencent Cloud endpoint, e.g. cos.accelerate.myqcloud.com
+  "slim": ""                                   // whether to enable Smart Compression
 }
 ```
 
@@ -114,19 +126,19 @@ The configuration items:
 
 v4:
 
-![image](https://user-images.githubusercontent.com/12621342/35483306-5e7ed570-047b-11e8-95a9-d56a3b4d2ba9.png)
+![image](https://pics.molunerfinn.com/doc/35483306-5e7ed570-047b-11e8-95a9-d56a3b4d2ba9.png)
 
 You should log in your Tecent portal and open [secret key adminstration](https://console.qcloud.com/cos4/secret):
 
-![image](https://user-images.githubusercontent.com/12621342/34243294-082c97cc-e65b-11e7-9412-dbc86433a91d.png)
+![image](https://pics.molunerfinn.com/doc/34243294-082c97cc-e65b-11e7-9412-dbc86433a91d.png)
 
 Find your `appId`, `SecretId` and `SecretKey`.
 
 Please go to the bucket list to open the bucket you need to upload, and see the corresponding area:
 
-![image](https://user-images.githubusercontent.com/12621342/34243443-befa715e-e65b-11e7-8404-aa5b8938a82b.png)
+![image](https://pics.molunerfinn.com/doc/34243443-befa715e-e65b-11e7-8404-aa5b8938a82b.png)
 
-![image](https://user-images.githubusercontent.com/12621342/34243476-edcc7798-e65b-11e7-8d59-8714cd0a59aa.png)
+![image](https://pics.molunerfinn.com/doc/34243476-edcc7798-e65b-11e7-8d59-8714cd0a59aa.png)
 
 If you want to upload images to a folder in your bucket, you need to add your folder path to `specify storage path` in PicGo (`/` is required)
 
@@ -136,7 +148,7 @@ If you want to upload images to a folder in your bucket, you need to add your fo
 
 Access: https://console.cloud.tencent.com/cam/capi
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/get_key_id_secret.png)
+![](https://pics.molunerfinn.com/doc/get_key_id_secret.png)
 
 **2.** Obtain your bucket and storage area.
 
@@ -144,15 +156,17 @@ Access: https://console.cloud.tencent.com/cos5/bucket
 
 Create a bucket. Then find your bucket name and storage area code:
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/get_bucket_area.png)
+![](https://pics.molunerfinn.com/doc/get_bucket_area.png)
 
 The bucket name of COS v5 is formatted as `bucket-appId` like `xxxx-12312313`, and its storage code is also slightly different from that of v4.
 
 **3.** Select v5 and confirm.
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/choose_v5.png)
+![](https://pics.molunerfinn.com/doc/choose_v5.png)
 
-`Set as Default Img`, so that your Img is Tencent by default.
+`Set as default image host`, so that Tencent becomes your default image host.
+
+**4.** *(Optional)* PicGo `2.4.0` adds `endpoint` and Smart Compression settings for COS. Configure them only when you need to use Tencent Cloud's endpoint feature or the paid Slim service.
 
 
 ### Upyun Cloud
@@ -170,21 +184,21 @@ The configuration items:
 }
 ```
 
-![image](https://user-images.githubusercontent.com/12621342/34319574-a6e141d0-e820-11e7-9b20-0ec0eb9b36af.png)
+![image](https://pics.molunerfinn.com/doc/34319574-a6e141d0-e820-11e7-9b20-0ec0eb9b36af.png)
 
-![image](https://user-images.githubusercontent.com/12621342/34319588-01510cd6-e821-11e7-9eeb-e61265af53ad.png)
+![image](https://pics.molunerfinn.com/doc/34319588-01510cd6-e821-11e7-9eeb-e61265af53ad.png)
 
 The name of the storage space is your service name, and the domain name is the name assigned by the Upyun or your customized domain.
 
-![image](https://user-images.githubusercontent.com/12621342/34319600-656c8d80-e821-11e7-8b02-34aa31a2d53a.png)
+![image](https://pics.molunerfinn.com/doc/34319600-656c8d80-e821-11e7-8b02-34aa31a2d53a.png)
 
-![image](https://user-images.githubusercontent.com/12621342/34319609-9fb3307a-e821-11e7-9746-b2e82417ba7f.png)
+![image](https://pics.molunerfinn.com/doc/34319609-9fb3307a-e821-11e7-9746-b2e82417ba7f.png)
 
 Since there is no intuitive control panel for Upyun storage, we recommend you to use the third-party web panel to view and operate:
 
 [UPYUN-API-Web-Tool](https://github.com/xcuts/UPYUN-API-Web-Tool)
 
-### GitHub Img
+### GitHub Image Host
 
 The configuration items:
 
@@ -200,9 +214,9 @@ The configuration items:
 
 **1.** Create and log in your GitHub account.
 
-**2.** Create a repo for GitHub Img.
+**2.** Create a repo for the GitHub image host.
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/create_new_repo.png)
+![](https://pics.molunerfinn.com/doc/create_new_repo.png)
 
 **3.** Generate a token for PicGo:
 
@@ -210,23 +224,23 @@ Access: https://github.com/setting/tokens
 
 `Generate new token`.
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/generate_new_token.png)
+![](https://pics.molunerfinn.com/doc/generate_new_token.png)
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/20180508210435.png)
+![](https://pics.molunerfinn.com/doc/20180508210435.png)
 
 **Note:** The token generated will be shown only once, so you should back it up.
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/copy_token.png)
+![](https://pics.molunerfinn.com/doc/copy_token.png)
 
 **4.** Configure your GitHub repository for PicGo.
 
-**Note: ** Use your GitHub repository `username/reponame`, and selete the branch (main by default). Afterward, you should set it as default Img by `set as default`.
+**Note: ** Use your GitHub repository `username/reponame`, and selete the branch (main by default). Afterward, you should set it as the default image host by clicking `set as default`.
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/setup_github.png)
+![](https://pics.molunerfinn.com/doc/setup_github.png)
 
 After uploading, you can find that some new images are added to your repository:
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/success.png)
+![](https://pics.molunerfinn.com/doc/success.png)
 
 ### Aliyun OSS
 
@@ -243,27 +257,27 @@ The configuration items:
 }
 ```
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/aliyun.png)
+![](https://pics.molunerfinn.com/doc/aliyun.png)
 
 Find your `accessKeyId` and `accessKeySecret` in your [Aliyun portal](https://usercenter.console.aliyun.com/#/manage/ak):
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/aliyun-key.png)
+![](https://pics.molunerfinn.com/doc/aliyun-key.png)
 
 Create a bucket as storage space:
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/aliyun-bucket.png)
+![](https://pics.molunerfinn.com/doc/aliyun-bucket.png)
 
 Confirm the code of your [storage area](https://www.alibabacloud.com/help/zh/doc-detail/31837.htm?spm=a2c63.p38356.a3.3.179112f0PBtYui):
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/aliyun-area.png)
+![](https://pics.molunerfinn.com/doc/aliyun-area.png)
 
 You can also find it in your bucket page:
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/aliyun-bucket-2.png)
+![](https://pics.molunerfinn.com/doc/aliyun-bucket-2.png)
 
 The images uploaded will be stored in path you set, such as `img/` (`/` is required). Storage path is optional, and you can keep it blank if you do not need it.
 
-### Imgur Img
+### Imgur Image Host
 
 The configuration items:
 
@@ -274,21 +288,33 @@ The configuration items:
 }
 ```
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/imgur-option.png)
+![](https://pics.molunerfinn.com/doc/imgur-option.png)
 
 Generate your clientId [here](https://api.imgur.com/oauth2/addclient) after Imgur after logging in (do not need callbackurl here).
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/imgur-clientid.png)
+![](https://pics.molunerfinn.com/doc/imgur-clientid.png)
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/imgur-client-id-2.png)
+![](https://pics.molunerfinn.com/doc/imgur-client-id-2.png)
 
 **Note:** Imgur restricts IP and requests in mainland China. If clientId is correct, configure the proxy setting when unable to upload images. Only HTTP proxies are supported by default, so you can consider using SM.MS as an alternative.
 
-### Other Imgs
+### Multiple Configurations per Image Host <Badge text="2.4.0+" />
 
-PicGo will no longer add other Imgs support. If you have other Img upload requirements, please refer to [PicGo-Core](https://picgo.github.io/PicGo-Core-Doc/), and develop other third-party plug-ins!
+Since `2.4.0`, PicGo lets you create more than one configuration for the same image host. Pick the configuration you want to use before uploading. Thanks to [@STDSuperman](https://github.com/STDSuperman) for the contribution!
 
------
+::: warning Note
+Remember to select the configuration you need; otherwise the new settings will not take effect.
+:::
+
+![](https://pics.molunerfinn.com/doc/203093104-9537e08a-2ef0-450d-a59d-c470dbcdd6c8.png)
+
+You can also choose the desired configuration in the upload panel:
+
+![](https://pics.molunerfinn.com/doc/210804413-4f78804f-a451-4ca5-93a3-63d461261b18.png)
+
+### Other Image Host
+
+PicGo will no longer add other Image host support. If you have other image upload requirements, please refer to [PicGo-Core](https://picgo.github.io/PicGo-Core-Doc/), and develop other third-party plug-ins!
 
 ## PicGo setting
 
@@ -296,20 +322,20 @@ PicGo will no longer add other Imgs support. If you have other Img upload requir
 
 Since v2.1.0, PicGo support to record your upload logs. If there is any error and other information, PicGo can timely feedback to the developer. You can open the log files in the setting (such as output the success, the failure, or do not output).
 
-![logs](https://raw.githubusercontent.com/Molunerfinn/test/master/docs/logs)
+![logs](https://pics.molunerfinn.com/doc/logs)
 
 #### Log file size <Badge text="2.3.1+" />
 
 Since `v2.3.1`, the default size of PicGo's log file is `10MB`. If you want to change the size of the log file, you can change the log file size in `PicGo`'s settings.
 
-![](https://pic.molunerfinn.com/picgo/docs/202211131633687.png)
+![](https://pics.molunerfinn.com/doc/202211131633687.png)
 
 
 ### Customized Shortcuts
 
 Since v1.4.0, PicGo support users to use their own shortcuts (`Cmd+Shift+P` for MacOS, `Ctrl+Shift+P` for Windows by default). Click the PicGo setting sidebar and open the shortcut panel to set your customized shortcuts (v2.2.0+). You can choose to disable or enable the shortcuts:
 
-![](https://cdn.jsdelivr.net/gh/Molunerfinn/test/picgo/20200101204942.png)
+![](https://pics.molunerfinn.com/doc/20200101204942.png)
 
 Click `edit`, press the shortcut keys in dialog and confirm. You can also set combined shortcuts.
 
@@ -325,7 +351,7 @@ PicGo supports `$fileName`since v2.1.2.
 PicGo supports `$extName`since v2.3.1.
 :::
 
-![customUrl](https://raw.githubusercontent.com/Molunerfinn/test/master/docs/customUrl)
+![customUrl](https://pics.molunerfinn.com/doc/customUrl)
 
 ### Upgrade Assistant
 
@@ -335,17 +361,17 @@ PicGo will inform you to upgrade if your version is not the latest. You can turn
 
 You can choose to auto-start PicGo when booting up.
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/autoStart.png)
+![](https://pics.molunerfinn.com/doc/autoStart.png)
 
 ### Mannually Rename before Uploading
 
 PicGo allow you to rename your images before uploading:
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/rename_before_upload.png)
+![](https://pics.molunerfinn.com/doc/rename_before_upload.png)
 
 Then you will see a window to rename your image. If you do not want to many any changes, just confirm, cancel or just close it. Besides, this feature also supports uploads in branch:
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/picgo_rename.gif)
+![](https://pics.molunerfinn.com/doc/picgo_rename.gif)
 
 ### Auto Rename with Timestamp
 
@@ -353,36 +379,36 @@ Then you will see a window to rename your image. If you do not want to many any 
 
 When enabled, the uploaded file name will be automatically replaced with the timestamp:
 
-![](https://user-images.githubusercontent.com/12621342/40976264-2de18afe-6900-11e8-8f35-746820632eb8.png)
+![](https://pics.molunerfinn.com/doc/40976264-2de18afe-6900-11e8-8f35-746820632eb8.png)
 
-### Select Img to Display
+### Select Image Hosts to Display
 
-You may not use all of the Imgs that PicGo gives to you. So in order to simplify the display, you can only select the Imgs you want to display, so that there is no scroll bar in the sidebar. It is important to note, however, that this is only show/hide and not exclude functionality. If you hide the Qiniu cloud, you can still upload images via its service.
+You may not use all of the image hosts that PicGo gives you. To simplify the display, select only the image hosts you want to see so there is no scroll bar in the sidebar. This is only show/hide and not an exclusion feature. If you hide Qiniu Cloud, you can still upload images via its service.
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/picbed-choose.gif)
+![](https://pics.molunerfinn.com/doc/picbed-choose.gif)
 
 ### Upload Status
 
-![](https://camo.githubusercontent.com/763757f281c0a19ee526f26bbb1a2814f164879b/68747470733a2f2f692e6c6f6c692e6e65742f323031382f30362f30352f356231363832666134316337302e706e67)
+![](https://pics.molunerfinn.com/doc/68747470733a2f2f692e6c6f6c692e6e65742f323031382f30362f30352f356231363832666134316337302e706e67)
 
 Every time PicGo uploads an image, the upload status will be shown to indicate that the image is being uploaded. **If you find that it doesn't work after you open it, notice if you've turned off the system-level message notification option, because PicGo calls the system-level message notification bar.**
 
 
 ### Upgrade Check
 
-![](https://user-images.githubusercontent.com/12621342/40976407-ad43d07c-6900-11e8-854f-15e1c41a7d8d.png)
+![](https://pics.molunerfinn.com/doc/40976407-ad43d07c-6900-11e8-854f-15e1c41a7d8d.png)
 
 ### Proxy Setting <Badge text="2.0.0+" /> 
 
 Since v2.0, PicGo supports HTTP proxy. You can set it at `proxy setting`. **We do not plan to add sophisticated proxy, because this is related to the underlying parts.**
 
-![](https://user-images.githubusercontent.com/12621342/50515474-ea83c600-0adf-11e9-8022-52f4ab9e0ea5.png)
+![](https://pics.molunerfinn.com/doc/50515474-ea83c600-0adf-11e9-8022-52f4ab9e0ea5.png)
 
 ### Use Builtin Clipboard to Upload <Badge text="2.3.1+" />
 
 The "Use Builtin Clipboard to Upload" feature can be used to replace the previous way of using scripts to get the clipboard pictures. Consider turning on this option if you encounter problems with clipboard uploads, such as process residuals, etc.
 
-![](https://pic.molunerfinn.com/picgo/docs/202211131629346.png)
+![](https://pics.molunerfinn.com/doc/202211131629346.png)
 
 
 ### i18n Settings <Badge text="2.3.1+" />
@@ -393,16 +419,16 @@ Since v2.3.1, PicGo supports multiple languages. The default supported languages
 - zh-TW
 - English
 
-![](https://pic.molunerfinn.com/picgo/docs/202211131620277.png)
+![](https://pics.molunerfinn.com/doc/202211131620277.png)
 
 If you want to add language support for PicGo, you can refer to the [i18n documentation for PicGo](https://github.com/Molunerfinn/PicGo/blob/dev/CONTRIBUTING_EN.md#i18n) & this [PR](https://github.com/Molunerfinn/PicGo/pull/976).
 
 
 ### Open Configuration Files <Badge text="2.0.0+" /> 
 
-Since v2.0, you can open your configuration files at `open configuration files` to see your images uploaded, you Img setting, etc.
+Since v2.0, you can open your configuration files at `open configuration files` to see your uploaded images, your image host settings, etc.
 
-![](https://user-images.githubusercontent.com/12621342/50515474-ea83c600-0adf-11e9-8022-52f4ab9e0ea5.png)
+![](https://pics.molunerfinn.com/doc/50515474-ea83c600-0adf-11e9-8022-52f4ab9e0ea5.png)
 
 ### PicGo-Server Setting <Badge text="2.2.0+" /> 
 
@@ -410,13 +436,25 @@ Since v2.2, a small server is turned on by default to coordinate with other appl
 
 About how to use PicGo server, you can refer to [Advanced Usage](/en/guide/advance.html).
 
-![](https://cdn.jsdelivr.net/gh/Molunerfinn/test/test/picgo-server.png)
+![](https://pics.molunerfinn.com/doc/picgo-server.png)
+
+### Launch Mode <Badge text="2.4.0+" />
+
+Decide whether PicGo should open the main window on launch. All platforms support `Silent launch` (default) and `Open the main window`, and Windows/Linux additionally offer `Open the Mini window`.
+
+### Show Dock Icon <Badge text="2.4.0+" />
+
+On macOS you can toggle whether PicGo keeps an icon in the Dock.
+
+### URL Encoding When Copying <Badge text="2.4.0+" />
+
+All built-in image hosts already escape URLs correctly. However, some third-party plug-ins or outputs with Chinese characters might require manual control. Use this switch to decide whether PicGo should URL-encode links before copying them.
 
 ## Plug-in Setting <Badge text="2.0.0+" /> 
 
 Since PicGo v2.0, you can install, update, disable, uninstall, configure, and use plug-ins simply on the `plug-in setting`page.
 
-![](https://user-images.githubusercontent.com/12621342/50515434-bc9e8180-0adf-11e9-8c71-0e39973c06b1.png)
+![](https://pics.molunerfinn.com/doc/50515434-bc9e8180-0adf-11e9-8c71-0e39973c06b1.png)
 
 ### Plug-in Installation
 
@@ -432,25 +470,25 @@ Then you can install it. If you meed the problem "not GUI optimized", you can as
 
 You can set them all in the PicGo setting. Note that PicGo need to be restarted to enable the new setting.
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/20190113155828.png)
+![](https://pics.molunerfinn.com/doc/20190113155828.png)
 
 ### Plug-in Configuration
 
 Some plug-ins has configuration option, click `configuration` to configurate:
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/20190113160001.png)
+![](https://pics.molunerfinn.com/doc/20190113160001.png)
 
-![](https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/20190113160029.png)
+![](https://pics.molunerfinn.com/doc/20190113160029.png)
 
 ### Plug-in Usage
 
 Some plug-ins have their own menu items, you can find the plug-in's own menu and use:
 
-![](https://i.loli.net/2019/01/12/5c39a2f60a32a.png)
+![](https://pics.molunerfinn.com/doc/5c39a2f60a32a.png)
 
-![](https://i.loli.net/2019/01/12/5c39aa4dab0b4.png)
+![](https://pics.molunerfinn.com/doc/5c39aa4dab0b4.png)
 
-![](https://i.loli.net/2019/01/12/5c39aea61e80d.gif)
+![](https://pics.molunerfinn.com/doc/5c39aea61e80d.gif)
 
 ### Awesome PicGo Plug-ins
 

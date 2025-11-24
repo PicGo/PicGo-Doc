@@ -4,8 +4,9 @@
   "description": "Docs for PicGo",
   "main": "index.js",
   "scripts": {
-    "dev": "vuepress dev docs --temp .temp",
-    "build": "vuepress build docs",
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs",
     "cz": "git-cz"
   },
   "repository": {
@@ -26,11 +27,12 @@
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",
     "@picgo/bump-version": "^1.0.2",
+    "@types/node": "^24.10.1",
     "commitizen": "^3.0.7",
     "conventional-changelog": "^3.1.3",
     "cz-customizable": "^5.10.0",
     "husky": "^1.3.1",
-    "vuepress": "^1.9.7"
+    "vitepress": "^1.0.0"
   },
   "husky": {
     "hooks": {
