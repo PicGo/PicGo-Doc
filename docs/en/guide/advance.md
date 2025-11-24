@@ -74,11 +74,11 @@ Starting from `2.4.0`, PicGo-Server also accepts multipart form-data uploads. Th
 
 If you want to use PicGo on your phone, install [flutter-picgo](https://github.com/PicGo/flutter-picgo). Thanks to [@hackycy](https://github.com/hackycy) for building it!
 
-Click the information bar button in the lower-left corner of the main window and choose "Generate ImgBed configuration QR code".
+Click the information bar button in the lower-left corner of the main window and choose "Generate image host configuration QR code".
 
 ![](https://pics.molunerfinn.com/doc/202108282131459.png)
 
-Then use flutter-picgo to scan the QR code and import your ImgBed configuration instantly.
+Then use flutter-picgo to scan the QR code and import your image host configuration instantly.
 
 ## PicGo Repair Toolbox <Badge text="2.4.0+" />
 

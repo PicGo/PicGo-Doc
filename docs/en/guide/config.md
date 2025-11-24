@@ -47,12 +47,12 @@ You can select the image link format in the album area since PicGo 2.0:
 `2.4.0` adds a bulk edit feature for domains inside the album area. For example, when you have multiple URLs that start with `https://www.a.com/...` and you want to switch them all to `www.b.com`, you can select those images and run this action.
 
 ::: warning Note
-You have to select the images before running the bulk edit. Use the ImgBed filter to quickly limit the scope.
+You have to select the images before running the bulk edit. Use the image host filter to quickly limit the scope.
 :::
 
 ![](https://pics.molunerfinn.com/doc/ee314dfc-7699-4ceb-8638-cafe7948bd5a)
 
-## Img Area
+## Image Host Area
 
 ### SM.MS <Badge text="2.3.0+" /> 
 
@@ -69,7 +69,7 @@ Sign up and log in [sm.ms](https://sm.ms/home/apitoken) to get your token.
 
 ![](https://pics.molunerfinn.com/doc/20200307182127.png)
 
-### Qiuniu Img
+### Qiuniu Image Host
 
 The configuration items:
 
@@ -164,7 +164,7 @@ The bucket name of COS v5 is formatted as `bucket-appId` like `xxxx-12312313`, a
 
 ![](https://pics.molunerfinn.com/doc/choose_v5.png)
 
-`Set as Default Img`, so that your Img is Tencent by default.
+`Set as default image host`, so that Tencent becomes your default image host.
 
 **4.** *(Optional)* PicGo `2.4.0` adds `endpoint` and Smart Compression settings for COS. Configure them only when you need to use Tencent Cloud's endpoint feature or the paid Slim service.
 
@@ -198,7 +198,7 @@ Since there is no intuitive control panel for Upyun storage, we recommend you to
 
 [UPYUN-API-Web-Tool](https://github.com/xcuts/UPYUN-API-Web-Tool)
 
-### GitHub Img
+### GitHub Image Host
 
 The configuration items:
 
@@ -214,7 +214,7 @@ The configuration items:
 
 **1.** Create and log in your GitHub account.
 
-**2.** Create a repo for GitHub Img.
+**2.** Create a repo for the GitHub image host.
 
 ![](https://pics.molunerfinn.com/doc/create_new_repo.png)
 
@@ -234,7 +234,7 @@ Access: https://github.com/setting/tokens
 
 **4.** Configure your GitHub repository for PicGo.
 
-**Note: ** Use your GitHub repository `username/reponame`, and selete the branch (main by default). Afterward, you should set it as default Img by `set as default`.
+**Note: ** Use your GitHub repository `username/reponame`, and selete the branch (main by default). Afterward, you should set it as the default image host by clicking `set as default`.
 
 ![](https://pics.molunerfinn.com/doc/setup_github.png)
 
@@ -277,7 +277,7 @@ You can also find it in your bucket page:
 
 The images uploaded will be stored in path you set, such as `img/` (`/` is required). Storage path is optional, and you can keep it blank if you do not need it.
 
-### Imgur Img
+### Imgur Image Host
 
 The configuration items:
 
@@ -298,9 +298,9 @@ Generate your clientId [here](https://api.imgur.com/oauth2/addclient) after Imgu
 
 **Note:** Imgur restricts IP and requests in mainland China. If clientId is correct, configure the proxy setting when unable to upload images. Only HTTP proxies are supported by default, so you can consider using SM.MS as an alternative.
 
-### Multiple Configurations per Img <Badge text="2.4.0+" />
+### Multiple Configurations per Image Host <Badge text="2.4.0+" />
 
-Since `2.4.0`, PicGo lets you create more than one configuration for the same ImgBed. Pick the configuration you want to use before uploading. Thanks to [@STDSuperman](https://github.com/STDSuperman) for the contribution!
+Since `2.4.0`, PicGo lets you create more than one configuration for the same image host. Pick the configuration you want to use before uploading. Thanks to [@STDSuperman](https://github.com/STDSuperman) for the contribution!
 
 ::: warning Note
 Remember to select the configuration you need; otherwise the new settings will not take effect.
@@ -312,9 +312,9 @@ You can also choose the desired configuration in the upload panel:
 
 ![](https://pics.molunerfinn.com/doc/210804413-4f78804f-a451-4ca5-93a3-63d461261b18.png)
 
-### Other Imgs
+### Other Image Host
 
-PicGo will no longer add other Imgs support. If you have other Img upload requirements, please refer to [PicGo-Core](https://picgo.github.io/PicGo-Core-Doc/), and develop other third-party plug-ins!
+PicGo will no longer add other Image host support. If you have other image upload requirements, please refer to [PicGo-Core](https://picgo.github.io/PicGo-Core-Doc/), and develop other third-party plug-ins!
 
 ## PicGo setting
 
@@ -381,9 +381,9 @@ When enabled, the uploaded file name will be automatically replaced with the tim
 
 ![](https://pics.molunerfinn.com/doc/40976264-2de18afe-6900-11e8-8f35-746820632eb8.png)
 
-### Select Img to Display
+### Select Image Hosts to Display
 
-You may not use all of the Imgs that PicGo gives to you. So in order to simplify the display, you can only select the Imgs you want to display, so that there is no scroll bar in the sidebar. It is important to note, however, that this is only show/hide and not exclude functionality. If you hide the Qiniu cloud, you can still upload images via its service.
+You may not use all of the image hosts that PicGo gives you. To simplify the display, select only the image hosts you want to see so there is no scroll bar in the sidebar. This is only show/hide and not an exclusion feature. If you hide Qiniu Cloud, you can still upload images via its service.
 
 ![](https://pics.molunerfinn.com/doc/picbed-choose.gif)
 
@@ -426,7 +426,7 @@ If you want to add language support for PicGo, you can refer to the [i18n docume
 
 ### Open Configuration Files <Badge text="2.0.0+" /> 
 
-Since v2.0, you can open your configuration files at `open configuration files` to see your images uploaded, you Img setting, etc.
+Since v2.0, you can open your configuration files at `open configuration files` to see your uploaded images, your image host settings, etc.
 
 ![](https://pics.molunerfinn.com/doc/50515474-ea83c600-0adf-11e9-8022-52f4ab9e0ea5.png)
 
@@ -448,7 +448,7 @@ On macOS you can toggle whether PicGo keeps an icon in the Dock.
 
 ### URL Encoding When Copying <Badge text="2.4.0+" />
 
-All built-in Imgs already escape URLs correctly. However, some third-party plug-ins or outputs with Chinese characters might require manual control. Use this switch to decide whether PicGo should URL-encode links before copying them.
+All built-in image hosts already escape URLs correctly. However, some third-party plug-ins or outputs with Chinese characters might require manual control. Use this switch to decide whether PicGo should URL-encode links before copying them.
 
 ## Plug-in Setting <Badge text="2.0.0+" /> 
 

@@ -5,7 +5,7 @@ Make sure you have Node.js >= 16.
 :::
 
 ::: tip
-The default Img is [SM.MS](https://sm.ms/). PicGo will automatically copy the image URL to your clipboard.
+The default image host is [SM.MS](https://sm.ms/). PicGo will automatically copy the image URL to your clipboard.
 :::
 
 ## Mini Window Upload

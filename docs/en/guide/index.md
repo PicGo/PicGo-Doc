@@ -25,9 +25,9 @@
 
 **PicGo: a tool for quickly uploading images and getting shareable URLs.**
 
-PicGo currently supports the following Imgs:
+PicGo currently supports the following image hosts:
 
-- `Qiniu Img` v1.0
+- `Qiniu image host` v1.0
 - `Tencent Cloud COS v4\v5` v1.1 & v1.5.0
 - `Upyun` v1.2.0
 - `GitHub` v1.5.0
@@ -35,7 +35,7 @@ PicGo currently supports the following Imgs:
 - `Alibaba OSS` v1.6.0
 - `Imgur` v1.6.0
 
-**PicGo itself does not plan to add more default Img support. You can build your own third-party Img plug-in.**
+**PicGo itself does not plan to add more default image host support. You can build your own third-party image host plug-in.**
 
 ## Key Features
 
@@ -44,7 +44,7 @@ PicGo currently supports the following Imgs:
 - Windows and macOS can upload via the context menu when you right-click image files (`v2.1.0+`).
 - Automatically copy the uploaded URLs to the clipboard.
 - Customize the link formats copied to the clipboard.
-- Plug-in system support, with community plug-ins for additional Imgs such as Gitee and QingCloud.
+- Plug-in system support, with community plug-ins for additional image hosts such as Gitee and QingCloud.
   - Find more third-party plug-ins and PicGo-based apps in [Awesome-PicGo](https://github.com/PicGo/Awesome-PicGo). Contributions are welcome!
 - Call PicGo via HTTP requests (`v2.2.0+`).
 - More features are waiting to be discovered, and development is ongoing. Follow the progress on [Projects](https://github.com/Molunerfinn/PicGo/projects).
