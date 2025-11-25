@@ -94,7 +94,7 @@ export default defineConfig({
     ]
   ],
   themeConfig: {
-    logo: 'https://pics.molunerfinn.com/doc/logo.png',
+    logo: 'https://pics.molunerfinn.com/doc/picgo-logo.png',
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Molunerfinn/PicGo' }
     ],

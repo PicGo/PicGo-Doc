@@ -4,7 +4,7 @@ hero:
   name: PicGo
   text: 图片上传、管理新体验
   image:
-    src: https://pics.molunerfinn.com/doc/logo.png
+    src: https://pics.molunerfinn.com/doc/picgo-logo.png
     alt: PicGo Logo
     width: 256
   actions:

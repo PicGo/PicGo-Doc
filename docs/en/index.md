@@ -5,7 +5,7 @@ hero:
   text: Picture uploading & management reimagined
   tagline: Upload images in seconds and get ready-to-use links
   image:
-    src: https://pics.molunerfinn.com/doc/logo.png
+    src: https://pics.molunerfinn.com/doc/picgo-logo.png
     alt: PicGo Logo
   actions:
     - theme: brand
