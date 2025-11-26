@@ -94,6 +94,9 @@ export default defineConfig({
       }
     ],
   ],
+  sitemap: {
+    hostname: 'https://picgo.github.io/PicGo-Doc/'
+  },
   themeConfig: {
     logo: 'https://pics.molunerfinn.com/doc/picgo-logo.png',
     socialLinks: [
