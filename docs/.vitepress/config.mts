@@ -85,13 +85,14 @@ export default defineConfig({
   description: '图片上传、管理新体验',
   base: '/PicGo-Doc/',
   head: [
+    ['meta', { name: 'google-site-verification', content: 'I9agtjzUmnyUxzdpci2kQuXzlOgw7qBLqR5w6PgUnjQ' }],
     [
       'link',
       {
         rel: 'icon',
         href: 'https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/New%20LOGO-150.png'
       }
-    ]
+    ],
   ],
   themeConfig: {
     logo: 'https://pics.molunerfinn.com/doc/picgo-logo.png',
