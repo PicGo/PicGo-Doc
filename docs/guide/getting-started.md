@@ -1,63 +1,60 @@
-## 快速上手
+# Quickstart
 
-::: warning 注意
-请确保你安装了 Node.js， 并且版本 >= 16。
+::: warning
+Make sure you have Node.js >= 20.
 :::
 
-::: tip 提示
-默认上传图床为[SM.MS](https://sm.ms/)。PicGo上传之后，会自动将上传成功的URL复制到你的剪贴板，支持5种复制格式。
+::: tip
+The default image host is [SM.MS](https://sm.ms/). PicGo will automatically copy the image URL to your clipboard.
 :::
 
-## Mini窗口上传
+## Mini Window Upload
 
-::: tip 提示
-Mini窗口只支持Windows和Linux，macOS可以使用顶部栏图标。（因为Windows和Linux的任务栏不支持拖拽事件）
+::: tip
+You can use mini window to upload your images in Windows and Linux. MacOS can do it using the top bar (Windows and Linux top bars don't support drag and drop events).
 :::
 
-> Linux为方形mini窗口
+> Rectangular mini window in Linux
+
 ![](https://pics.molunerfinn.com/doc/linux-mini-window.png)
 
-> Windows为圆形mini窗口
+> Round mini window in Windows
+
 ![](https://pics.molunerfinn.com/doc/windows-mini-window.png)
 
-1. 可以直接拖拽图片到mini窗口上上传
-2. 将图片复制到剪贴板，然后右键mini窗口，选择`剪贴板图片上传`
+1. You can directly drag and drop images to the mini window for uploading.
+2. Copy the image to the clipboard, then right click on the mini window and select `clipboard image upload` ( **You are not allowed to copy the image itself in systems other than macOS, e.g. Windows must open the image and copy by right-clicking. In the normal case, you want to directly upload your image once you have a snipshot. That is the rationality of this design.** ）
 
-::: tip 提示
-**只有macOS以及Windows10可以通过复制图片文件本身然后通过剪贴板图片上传。Windows7或者Linux必须打开图片后，右键图片->复制图片才可以通过剪贴板图片上传。不过通常情况下，你直接截图后，图片就复制到剪贴板了。所以截图之后可以直接使用这个功能。**
+## Top Bar Upload
+
+::: tip
+Top bar upload is only supported in MacOS.
 :::
 
-
-## 顶部栏上传
-
-::: tip 提示
-顶部栏上传只支持macOS系统。
-:::
-
-1. 可以直接拖拽图片到顶部栏PicGo图标处上传。
-2. 可以将图片复制到剪贴板，然后点击顶部栏PicGo图标，点击`等待上传`区的图片，就会自动上传了。
+1. You can drag and drop images to the PicGo icon in the top bar for uploading.
+2. You can copy the image to the clipboard, then click on the PicGo icon in the top bar, click the image in `wait to upload` area, then the image will automatically upload.
 
 
 ![](https://pics.molunerfinn.com/doc/34242310-b5056510-e655-11e7-8568-60ffd4f71910.gif)
 
-## 主窗口上传
+## Main Window Upload
 
-不同平台打开主窗口的方式不同：
+Different platforms open the main window in different ways.
 
-- Windows请在右下角任务栏中找到PicGo图标，如果找不到请点击小箭头。左键即可打开。
+- Windows please find the PicGo icon in the taskbar at the bottom right corner, if you can't find it please click the small arrow. Left click to open it.
 
 ![](https://pics.molunerfinn.com/doc/202108282035035.png)
 
-- macOS请在顶部栏区域找到PicGo图标，右键（触摸板双指点按或者鼠标右键）即可找到打开主窗口的菜单。或者在 `2.3.1+` 版本可以通过顶部栏窗口的按钮打开：
+- For macOS, please find the PicGo icon in the top bar area and right click (touchpad double finger click or right mouse button) to find the menu to open the main window. Or in version `2.3.1+` you can open it from the top bar window with the button.
 
 ![](https://pics.molunerfinn.com/doc/202211131604805.png)
 
-- Linux请在在Mini窗口或者任务栏图标右键 -> 打开`详细窗口`，即可打开主窗口。
+- For Linux, right-click on the Mini window or Taskbar icon -> Open `Detail Window` to open the main window.
 
 ![](https://pics.molunerfinn.com/doc/5c3ae442c124b.png)
 
-1. 直接在主窗口上传区域拖拽图片上传。
-2. 直接在主窗口上传区域点击，然后弹出文件浏览器后选择图片上传。
-3. 可以将图片复制到剪贴板，然后点击`剪贴板图片上传`按钮来上传。
+1. Drag and drop image upload directly from the upload area of the main window.
+2. Click directly in the upload area of the main window, then pop up the file browser and select the image upload.
+3. You can copy the picture to the clipboard, and then click the `clipboard picture upload` button to upload.
 
 ![](https://pics.molunerfinn.com/doc/picgo-2.0.gif)

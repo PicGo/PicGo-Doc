@@ -2,24 +2,29 @@
 layout: home
 hero:
   name: PicGo
-  text: 图片上传、管理新体验
+  text: The Ultimate Image Uploader for Efficient Creators
+  tagline: Upload images in one step and automatically copy shareable links—stay focused on creating, not uploading.
   image:
     src: https://pics.molunerfinn.com/doc/picgo-logo.png
     alt: PicGo Logo
-    width: 256
   actions:
     - theme: brand
-      text: 快速开始
-      link: /guide/
+      text: Quick Start
+      link: /guide/getting-started
     - theme: alt
-      text: GitHub
-      link: https://github.com/Molunerfinn/PicGo
+      text: Download
+      link: https://github.com/Molunerfinn/PicGo/releases
+    - theme: alt
+      text: Homepage
+      link: https://picgo.app
 features:
-  - title: 灵活上传
-    details: 主窗口支持拖拽、选择图片上传；支持读取剪贴板的第一张图片快捷上传。macOS支持顶部栏拖拽上传。
-  - title: 自动复制链接
-    details: 上传成功后自动复制链接地址到剪贴板，支持5种复制粘贴格式，让你的文本编辑极致高效。
-  - title: 支持插件系统
-    details: 支持JavaScript开发的插件，给予插件极大自由度，让PicGo更加强大，成为你得手的效率工具。
+  - title: Smooth writing flow
+    details: Auto-copy links after upload and support multiple formats (Markdown/HTML/URL/custom templates).
+  - title: Fast uploads
+    details: Drag & drop, paste from clipboard, hotkeys, and even right-click context menu upload.
+  - title: Powerful plugin ecosystem
+    details: Extend PicGo with plugins for more image hosts and workflows—AWS S3, Cloudflare R2, MinIO, and more.
+  - title: Developer-friendly
+    details: HTTP API and CLI support, open source, and documentation for power users.
 footer: MIT Licensed | Copyright © 2017 - Now Molunerfinn
 ---

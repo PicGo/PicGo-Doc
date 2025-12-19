@@ -1,40 +1,40 @@
 ---
 sidebarDepth: 3
 ---
-# 高级技巧
+# Advanced Usage
 
-## 命令行上传 <Badge text="2.1.0+" /> 
+## Upload using Command Line <Badge text="2.1.0+" /> 
 
-PicGo在`2.1.0`版本开始支持命令行调用PicGo客户端进行上传了。
+PicGo started supporting to use command line to call to PicGo clients for uploading since version 2.1.0.
 
-上传的命令是 `upload` （用于上传剪贴板图片）以及 `upload xxx.jpg` 用于上传具体路径的图片。
+You can use `upload` to upload the image on your clipboard and use `upload xxx.jpg` to upload the image in the specific path. 
 
 ### Windows
 
-Windows可以通过 `你安装的PicGo的路径\PicGo.exe upload` 来调用上传。
+For Windows users, you can upload your image using `PATH\PicGo.exe upload`, where 'PATH' is your PicGo path.
 
 ### macOS
 
-macOS可以通过 `/Applications/PicGo.app/Contents/MacOS/PicGo upload` 来调用上传。
+For MacOS users, you can upload your image using `/Applications/PicGo.app/Contents/MacOS/PicGo upload`.
 
 ### Linux
 
-Linux可以通过 `你安装的PicGo的路径/PicGo.AppImage upload` 来调用上传。
+For Linux users, you can upload your image using `PATH/PicGo.AppImage upload`, where 'PATH' is your PicGo path.
 
-## PicGo-Server的使用 <Badge text="2.2.0+" /> 
+## PicGo-Server Usage <Badge text="2.2.0+" /> 
 
-PicGo在`2.2.0`版本开始内置了一个小型的服务器，用于接收来自其他应用的HTTP请求来上传图片。
+PicGo has a small built-in server that receives HTTP requests from other applications to upload images since `2.2.0`.
 
-默认监听地址： `127.0.0.1`，默认监听端口：`36677`
+Default listening address: `127.0.0.1`. Default listening port: `36677`
 
-### HTTP调用上传剪贴板图片
+### Upload the image on clipboard by calling HTTP
 
 - method: `POST`
-- url: `http://127.0.0.1:36677/upload` （此处以默认配置为例）
+- url: `http://127.0.0.1:36677/upload` (use the default setting as an example)
 
-即可上传。
+Then, you can upload your image.
 
-返回的数据：
+Returned data:
 
 ```json
 {
@@ -45,14 +45,13 @@ PicGo在`2.2.0`版本开始内置了一个小型的服务器，用于接收来�
 
 ![](https://pics.molunerfinn.com/doc/picgo-server-upload-clipboard-file.png)
 
-### HTTP调用上传具体路径图片
+### Upload the specific image by calling HTTP
 
 - method: `POST`
-- url: `http://127.0.0.1:36677/upload` （此处以默认配置为例）
-- request body: `{list: ['xxx.jpg']}` 必须是JSON格式
+- url: `http://127.0.0.1:36677/upload` (use the default setting as an example)
+- request body: `{list: ['xxx.jpg']}` must be JSON-formatted
 
 ![](https://pics.molunerfinn.com/doc/71626614-1b359880-2c29-11ea-8efe-330f15116268.png)
-
 
 ```json
 {
@@ -61,29 +60,29 @@ PicGo在`2.2.0`版本开始内置了一个小型的服务器，用于接收来�
 }
 ```
 
-### HTTP 调用上传表单图片 <Badge text="2.4.0+" />
+### Upload images with HTTP form data <Badge text="2.4.0+" />
 
-从 `2.4.0` 版本开始，PicGo-Server 支持通过表单上传图片文件了。感谢 [@happy-game](https://github.com/happy-game) 的贡献！
+Starting from `2.4.0`, PicGo-Server also accepts multipart form-data uploads. Thanks to [@happy-game](https://github.com/happy-game) for the contribution!
 
 - method: `POST`
-- url: `http://127.0.0.1:36677/upload` （此处以默认配置为例）
-- request body: form-data，key为 `files`，value为图片文件，可以多张图片。
+- url: `http://127.0.0.1:36677/upload` (using the default settings as an example)
+- request body: form-data whose key is `files` and value is the image file. Multiple files are supported at once.
 
 ![](https://pics.molunerfinn.com/doc/20251124162453718.png)
 
-## PicGo手机客户端联动 <Badge text="2.3.0+" /> 
+## PicGo Mobile App Integration <Badge text="2.3.0+" />
 
-如果你想在手机上使用 PicGo，可以安装 [flutter-picgo](https://github.com/PicGo/flutter-picgo)，感谢 [@hackycy](https://github.com/hackycy) 的贡献！
+If you want to use PicGo on your phone, install [flutter-picgo](https://github.com/PicGo/flutter-picgo). Thanks to [@hackycy](https://github.com/hackycy) for building it!
 
-可以通过点击主窗口左下角信息栏按钮，找到「生成图床配置二维码」菜单
+Click the information bar button in the lower-left corner of the main window and choose "Generate image host configuration QR code".
 
 ![](https://pics.molunerfinn.com/doc/202108282131459.png)
 
-然后通过 flutter-picgo 的扫码功能，一键导入图床配置。
+Then use flutter-picgo to scan the QR code and import your image host configuration instantly.
 
-## PicGo 修复工具箱 <Badge text="2.4.0+" />
+## PicGo Repair Toolbox <Badge text="2.4.0+" />
 
-从 `2.4.0` 版本开始，在主界面的 `i` 图标按钮中，有一个「PicGo 修复工具箱」功能，当你遇到 PicGo 使用异常的时候，可以尝试用修复工具箱自主排查和修复问题。
+Starting in `2.4.0`, you can find a "PicGo Repair Toolbox" entry under the `i` button on the main interface. Use it to troubleshoot and fix issues yourself when PicGo behaves abnormally.
 
 ![](https://pics.molunerfinn.com/doc/20251121171753489.png)
 

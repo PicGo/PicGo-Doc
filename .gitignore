@@ -66,3 +66,4 @@ docs/.vitepress/cache
 
 .temp/
 .serena/
+.DS_Store
