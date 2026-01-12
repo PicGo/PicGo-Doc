@@ -20,11 +20,98 @@ In Linux and MacOS, you can find the configuration at:
 
 ## Upload Area
 
-PicGo's upload area supports drag and drop or open your folder to upload images.
+PicGo's upload area supports drag and drop or open your folder to upload images. It also supports uploading clipboard images and uploading by URL.
+
+![](https://pics.molunerfinn.com/doc/picgo-2.0.gif)
+
+### Drag web images to upload <Badge text="2.3.0+" />
+
+Since `2.3.0`, you can drag images from web pages directly into the upload area. Under the hood, it uploads via the **Upload by URL** feature.
+
+### Upload by URL <Badge text="2.3.0+" />
+
+Since `2.3.0`, you can upload images by URL. This is useful when you want to re-host images from other websites into your own image host.
+
+![](https://pics.molunerfinn.com/doc/20260112213512963.png)
+
+#### Batch URL upload <Badge text="2.4.3+" />
+
+Starting from `2.4.3`, URL upload supports uploading multiple URLs in one action (**one URL per line**):
+
+- Empty lines are ignored.
+- Duplicate URLs are de-duplicated automatically (the first occurrence order is preserved).
+- Invalid lines (non-`http(s)` URLs) are skipped. PicGo will show a warning and write the skipped line contents into `picgo.log` for troubleshooting.
+- If you attempt to upload more than 10 URLs at once, PicGo will ask for confirmation. Cancel will return to the input dialog with the original content preserved.
+
+#### Tips <Badge text="2.4.3+" />
+
+- When opening the URL input dialog, PicGo will try to extract `http(s)` URLs from your clipboard text and prefill the dialog (upload still requires explicit confirmation).
+- The URL input uses a resizable textarea (max height: 240px).
+
+#### Drag-and-drop URLs <Badge text="2.4.3+" />
+
+You can also drag text that contains URLs (or `text/uri-list`) into the upload area. PicGo will parse newline-delimited URLs and upload the valid ones.
 
 ### All-format Upload <Badge text="2.4.0+" />
 
 Since `2.4.0`, PicGo supports the "all-format upload" feature, which means you can drag non-image files into the upload area as well.
+
+## Global URL Rewrite <Badge text="2.4.3+" />
+
+Starting from `2.4.3`, PicGo provides a GUI to manage global URL rewrite rules (`settings.urlRewrite.rules`). These rules can rewrite generated URLs after upload (e.g. change domain, force https, adjust paths, etc.).
+
+How to open:
+
+1. Open PicGo Settings
+2. Click **URL rewrite**
+
+![](https://pics.molunerfinn.com/doc/20260112213743681.png)
+
+### Rule basics
+
+Each rule includes:
+
+- **Match (`match`)**: a JavaScript `RegExp` pattern (do not include `/.../`) used to match the URL
+- **Replace (`replace`)**: replacement string (supports `$1`, `$2`, ... capture groups)
+- **Flags**: `g` (global replace) and `i` (ignore case)
+- **Enabled**: disabled rules are skipped
+- **Order**: rules are evaluated top-down; **the first enabled match wins**
+
+### Preview
+
+At the bottom of the page, you can input a URL to preview:
+
+- which rule is matched (if any)
+- the rewritten output URL
+
+![](https://pics.molunerfinn.com/doc/20260112213811627.png)
+
+### Examples
+
+#### Example 1: Replace domain (keep path)
+
+```text
+match: https://old.example.com/
+replace: https://new.example.com/
+```
+
+#### Example 2: Force https
+
+```text
+match: ^http://
+replace: https://
+```
+
+#### Example 3: Replace GitHub raw URLs with jsDelivr URLs
+
+![](https://pics.molunerfinn.com/doc/20260112214001033.png)
+
+```text
+match: ^https://raw.githubusercontent.com/([^/]+)/([^/]+)/([^/]+)/(.*)$
+replace: https://cdn.jsdelivr.net/gh/$1/$2/$3/$4
+```
+
+For more details, see PicGo-Core's [documentation](https://picgo.github.io/PicGo-Core-Doc/guide/config.html#settings).
 
 ## Album Area
 
@@ -42,15 +129,45 @@ You can select the image link format in the album area since PicGo 2.0:
 
 ![](https://pics.molunerfinn.com/doc/50515502-17d07400-0ae0-11e9-80b9-c38f25b64922.png)
 
-### Bulk Edit Image Domains <Badge text="2.4.0+" />
+### Select all and shift multi-select <Badge text="2.3.0+" />
 
-`2.4.0` adds a bulk edit feature for domains inside the album area. For example, when you have multiple URLs that start with `https://www.a.com/...` and you want to switch them all to `www.b.com`, you can select those images and run this action.
+Since `2.3.0`, the album toolbar supports **Select all**:
+
+![](https://pics.molunerfinn.com/doc/202108282136783.png)
+
+It also supports simple multi-select across images with the `Shift` key.
+
+### Bulk Rewrite Image URLs <Badge text="2.4.3+" />
+
+Starting from `2.4.3`, PicGo supports bulk rewriting URLs for selected album items. This is not limited to rewriting the host—you can rewrite the full link using regex rules.
+
+How to use:
+
+1. Select the images you want to rewrite (you can filter by image host to narrow down the list)
+2. Click the **More** (`…`) button in the album toolbar
+3. Choose **Rewrite selected image URLs**
+
+Then you can:
+
+- Toggle **Apply global URL rewrite rules** to use the rules you configured in **Global URL Rewrite** (it also shows the global rule count)
+- (Optional) Fill a **temporary rule** (match + replace). The temporary rule takes priority over global rules.
+  - `g`: global replace
+  - `i`: ignore case
+
+If you filled a temporary rule, PicGo will ask whether you want to save it into the global rule list:
+
+- **Apply and save**: apply to the current selection and append the rule to the global list
+- **Apply only**: apply to the current selection only
+- **Cancel**: cancel this operation
+
+After the operation, PicGo will show the success/failed counts. If no URLs are changed, PicGo will also notify you.
 
 ::: warning Note
-You have to select the images before running the bulk edit. Use the image host filter to quickly limit the scope.
+- It is recommended to preview your rules first in **Global URL Rewrite** to avoid unexpected bulk edits.
+- If the rewritten result becomes an empty string, it will be skipped.
 :::
 
-![](https://pics.molunerfinn.com/doc/ee314dfc-7699-4ceb-8638-cafe7948bd5a)
+![](https://pics.molunerfinn.com/doc/20260112213624505.png)
 
 ## Image Host Area
 

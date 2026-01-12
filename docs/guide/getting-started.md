@@ -24,6 +24,7 @@ You can use mini window to upload your images in Windows and Linux. MacOS can do
 
 1. You can directly drag and drop images to the mini window for uploading.
 2. Copy the image to the clipboard, then right click on the mini window and select `clipboard image upload` ( **You are not allowed to copy the image itself in systems other than macOS, e.g. Windows must open the image and copy by right-clicking. In the normal case, you want to directly upload your image once you have a snipshot. That is the rationality of this design.** ）
+3. <Badge text="2.4.3+" /> You can also drag and drop image URLs (or multi-line URL text) to the mini window to upload by URL (less common).
 
 ## Top Bar Upload
 
