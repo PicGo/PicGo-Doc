@@ -5,6 +5,8 @@ import { getNestedSidebarItems } from './utils/sidebar'
 const EDIT_LINK_PATTERN = 'https://github.com/PicGo/PicGo-Doc/edit/master/docs/:path'
 const NEW_SITE_ORIGIN = 'https://docs.picgo.app'
 const NEW_SECTION_BASE = '/gui/'
+// The legacy landing page was PicGo's de facto homepage for years, so it points at the product site rather than the docs index.
+const PRODUCT_SITE_ORIGIN = 'https://picgo.app'
 const LEGACY_BASE = '/PicGo-Doc/'
 
 const normalizeRelativePath = (relativePath: string): { localePrefix: string; path: string } => {
@@ -26,12 +28,15 @@ const normalizeRelativePath = (relativePath: string): { localePrefix: string; pa
 
 const buildCanonicalUrl = (relativePath: string): string => {
   const { localePrefix, path } = normalizeRelativePath(relativePath)
+  if (!path) {
+    return `${PRODUCT_SITE_ORIGIN}${localePrefix}/`
+  }
   const base = `${NEW_SITE_ORIGIN}${localePrefix}${NEW_SECTION_BASE}`
   const normalizedPath = path.replace(/^\/+/, '')
   return `${base}${normalizedPath}`
 }
 
-const buildRedirectScript = (): string => `\n(function() {\n  var newHost = '${NEW_SITE_ORIGIN}';\n  var sectionBase = '${NEW_SECTION_BASE}';\n  var oldBase = '${LEGACY_BASE}';\n  var path = window.location.pathname || '/';\n\n  if (path.startsWith(oldBase)) {\n    path = path.slice(oldBase.length);\n  } else {\n    path = path.replace(/^\\/+/, '');\n  }\n\n  var isZh = path.startsWith('zh/');\n  if (isZh) {\n    path = path.slice(3);\n  }\n\n  if (path === '' || path === 'index.html') {\n    path = '';\n  } else if (path.endsWith('/index.html')) {\n    path = path.slice(0, -'/index.html'.length) + '/';\n  } else if (path.endsWith('.html')) {\n    path = path.slice(0, -'.html'.length);\n  }\n\n  if (path.startsWith('/')) {\n    path = path.slice(1);\n  }\n\n  var newUrl = newHost + (isZh ? '/zh' : '') + sectionBase + path + window.location.search + window.location.hash;\n  if (newUrl !== window.location.href) {\n    window.location.replace(newUrl);\n  }\n})();\n`
+const buildRedirectScript = (): string => `\n(function() {\n  var newHost = '${NEW_SITE_ORIGIN}';\n  var sectionBase = '${NEW_SECTION_BASE}';\n  var oldBase = '${LEGACY_BASE}';\n  var path = window.location.pathname || '/';\n\n  if (path.startsWith(oldBase)) {\n    path = path.slice(oldBase.length);\n  } else {\n    path = path.replace(/^\\/+/, '');\n  }\n\n  var isZh = path.startsWith('zh/');\n  if (isZh) {\n    path = path.slice(3);\n  }\n\n  if (path === '' || path === 'index.html') {\n    path = '';\n  } else if (path.endsWith('/index.html')) {\n    path = path.slice(0, -'/index.html'.length) + '/';\n  } else if (path.endsWith('.html')) {\n    path = path.slice(0, -'.html'.length);\n  }\n\n  if (path.startsWith('/')) {\n    path = path.slice(1);\n  }\n\n  var newUrl = path === ''\n    ? '${PRODUCT_SITE_ORIGIN}' + (isZh ? '/zh' : '') + '/' + window.location.search + window.location.hash\n    : newHost + (isZh ? '/zh' : '') + sectionBase + path + window.location.search + window.location.hash;\n  if (newUrl !== window.location.href) {\n    window.location.replace(newUrl);\n  }\n})();\n`
 
 const commonNavList = [
   {
